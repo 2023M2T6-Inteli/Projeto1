@@ -5,7 +5,7 @@ app.use(express.json());
 
 const teachersRouter = require('./routes/teacher');
 
-app.use('/api/teachers', teachersRouter);
+app.use('/teachers', teachersRouter);
 
 const HOST = '127.0.0.1';
 const PORT = 3000;
