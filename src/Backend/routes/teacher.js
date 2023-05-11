@@ -5,13 +5,13 @@ const router = express.Router();
 
 router.use(express.json());
 
-const DATABASE = 'data/database.db';
+const DATABASE = 'data/database.sqlite';
 
 // mostra todos os professores
 router.get('/', (req, res) => {
     const db = new sqlite3.Database(DATABASE);
 
-    db.all("SELECT * FROM professor", (err, rows) => {
+    db.all("SELECT * FROM teacher", (err, rows) => {
         if (err) {
             console.log(err);
             res.status(500).send('Erro ao buscar professores');
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
 router.get('/:teacher_id', (req, res) => {
     const db = new sqlite3.Database(DATABASE);
 
-    db.all("SELECT * FROM professor WHERE idprofessor = ?", [req.params.teacher_id], (err, rows) => {
+    db.all("SELECT * FROM teacher WHERE teacher_id = ?", [req.params.teacher_id], (err, rows) => {
         if (err) {
             console.log(err);
             res.status(500).send('Erro ao buscar professores');
@@ -49,9 +49,9 @@ router.get('/:teacher_id', (req, res) => {
 // adiciona um novo professor
 router.post('/', (req, res) => {
     const db = new sqlite3.Database(DATABASE);
-    const { name, email, password } = req.body;
+    const { teacher_name, email, teacher_password } = req.body;
 
-    db.run(`INSERT INTO professor (nome, email, senha) VALUES (?, ?, ?)`, [name, email, password], function (err) {
+    db.run(`INSERT INTO teacher (teacher_name, email, teacher_password) VALUES (?, ?, ?)`, [teacher_name, email, teacher_password], function (err) {
         if (err) {
             res.status(500).send('Erro ao adicionar professor');
             console.log(err);
@@ -59,21 +59,27 @@ router.post('/', (req, res) => {
         }
         res.status(201).send(`Professor ${this.lastID} adicionado com sucesso`);
     });
-    db.close();
 
+    db.close();
 });
 
 // atualiza informações de um professor
 router.put('/:teacher_id', (req, res) => {
     const db = new sqlite3.Database(DATABASE);
-    const { name, email, password } = req.body;
+    const { teacher_name, email, teacher_password } = req.body;
 
-    db.run(`UPDATE professor SET nome = coalesce(?, nome), email = coalesce(?, email), senha = coalesce(?, senha) WHERE idprofessor = ?`, [name, email, password, req.params.teacher_id], (err) => {
+    db.run(`UPDATE teacher SET teacher_name = coalesce(?, teacher_name), email = coalesce(?, email), teacher_password = coalesce(?, teacher_password) WHERE teacher_id = ?`, [teacher_name, email, teacher_password, req.params.teacher_id], (err) => {
         if (err) {
             res.status(500).send('Erro ao atualizar professor');
             console.log(err);
             return;
         }
+
+        if (this.changes == 0) {
+            res.status(404).send('Professor não encontrado');
+            return;
+        }
+
         res.status(201).send('Professor atualizado com sucesso');
     });
 
@@ -84,7 +90,7 @@ router.put('/:teacher_id', (req, res) => {
 router.delete('/:teacher_id', (req, res) => {
     const db = new sqlite3.Database(DATABASE);
 
-    db.run(`DELETE FROM professor WHERE idprofessor = ? `, [req.params.teacher_id], (err) => {
+    db.run(`DELETE FROM teacher WHERE teacher_id = ? `, [req.params.teacher_id], (err) => {
         if (err) {
             res.status(500).send('Erro ao remover professor');
             console.log(err);
