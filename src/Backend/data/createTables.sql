@@ -1,69 +1,76 @@
 BEGIN TRANSACTION;
-CREATE TABLE IF NOT EXISTS "professor" (
-	"idprofessor"	INTEGER PRIMARY KEY AUTOINCREMENT,
-	"nome"	TEXT,
-	"email"	TEXT,
-	"senha"	TEXT
+
+CREATE TABLE IF NOT EXISTS teacher (
+  teacher_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  teacher_name TEXT,
+  email TEXT,
+  teacher_password TEXT
 );
-CREATE TABLE IF NOT EXISTS "turma" (
-	"idturma"	INTEGER,
-	"ano"	INTEGER,
-	"escola"	TEXT,
-	"idprofessor"	INTEGER,
-	PRIMARY KEY("idturma"),
-	FOREIGN KEY("idprofessor") REFERENCES "professor"("idprofessor")
+
+CREATE TABLE IF NOT EXISTS class (
+  class_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  class_name TEXT,
+  school_year INTEGER,
+  school TEXT,
+  teacher_id INTEGER,
+  FOREIGN KEY (teacher_id) REFERENCES teacher (teacher_id)
 );
-CREATE TABLE IF NOT EXISTS "aluno" (
-	"idaluno"	INTEGER,
-	"nome"	TEXT,
-	"idturma"	INTEGER,
-	PRIMARY KEY("idaluno"),
-	FOREIGN KEY("idturma") REFERENCES "turma"("idturma")
+
+CREATE TABLE IF NOT EXISTS student (
+  student_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  student_name TEXT,
+  class_id INTEGER,
+  FOREIGN KEY (class_id) REFERENCES class (class_id)
 );
-CREATE TABLE IF NOT EXISTS "atividade" (
-	"idatividade"	INTEGER,
-	"nome_atividade"	TEXT,
-	"descricao_atividade"	TEXT,
-	PRIMARY KEY("idatividade")
+
+CREATE TABLE IF NOT EXISTS activity (
+  activity_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  activity_name TEXT,
+  activity_description TEXT
 );
-CREATE TABLE IF NOT EXISTS "participa" (
-	"idatividade"	INTEGER NOT NULL,
-	"idaluno"	INTEGER NOT NULL,
-	"idnota"	INTEGER,
-	PRIMARY KEY("idatividade","idaluno"),
-	FOREIGN KEY("idatividade") REFERENCES "atividade"("id"),
-	FOREIGN KEY("idaluno") REFERENCES "aluno"("id"),
-	FOREIGN KEY("idnota") REFERENCES "nota"("id")
+
+CREATE TABLE IF NOT EXISTS participate (
+  activity_id INTEGER NOT NULL,
+  student_id INTEGER NOT NULL,
+  note_id INTEGER,
+  PRIMARY KEY (activity_id, student_id),
+  FOREIGN KEY (activity_id) REFERENCES activity (activity_id),
+  FOREIGN KEY (student_id) REFERENCES student (student_id),
+  FOREIGN KEY (note_id) REFERENCES grade (note_id)
 );
-CREATE TABLE IF NOT EXISTS "nota" (
-	"idnota"	INTEGER
-	"nota"	FLOAT,
-	PRIMARY KEY("idnota")
+
+CREATE TABLE IF NOT EXISTS grade (
+  note_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  grade_value FLOAT
 );
-CREATE TABLE IF NOT EXISTS "habilidade" (
-	"idhabilidade"	TEXT,
-	"descricao_habilidade"	TEXT,
-	PRIMARY KEY("idhabilidade")
+
+CREATE TABLE IF NOT EXISTS skill (
+  skill_id TEXT PRIMARY KEY,
+  skill_description TEXT
 );
-CREATE TABLE IF NOT EXISTS "avalia" (
-	"idatividade"	INTEGER NOT NULL,
-	"idhabilidade"	INTEGER NOT NULL,
-	PRIMARY KEY("idatividade"),
-	FOREIGN KEY("idatividade") REFERENCES "atividade"("id"),
-	FOREIGN KEY("idhabilidade") REFERENCES "habilidade"("id")
+
+CREATE TABLE IF NOT EXISTS evaluate (
+  activity_id INTEGER NOT NULL,
+  skill_id INTEGER NOT NULL,
+  PRIMARY KEY (activity_id),
+  FOREIGN KEY (activity_id) REFERENCES activity (activity_id),
+  FOREIGN KEY (skill_id) REFERENCES skill (skill_id)
 );
-CREATE TABLE IF NOT EXISTS "demonstra" (
-	"idhabilidade"	INTEGER NOT NULL,
-	"idaluno"	INTEGER NOT NULL,
-	FOREIGN KEY("idhabilidade") REFERENCES "habilidade"("id"),
-	FOREIGN KEY("idaluno") REFERENCES "aluno"("id"),
-	PRIMARY KEY("idhabilidade","idaluno")
+
+CREATE TABLE IF NOT EXISTS demonstrate (
+  skill_id INTEGER NOT NULL,
+  student_id INTEGER NOT NULL,
+  FOREIGN KEY (skill_id) REFERENCES skill (skill_id),
+  FOREIGN KEY (student_id) REFERENCES student (student_id),
+  PRIMARY KEY (skill_id, student_id)
 );
-CREATE TABLE IF NOT EXISTS "depende" (
-	"idhabilidade"	INTEGER NOT NULL,
-	"iddependente"	INTEGER NOT NULL,
-	FOREIGN KEY("idhabilidade") REFERENCES "habilidade"("id"),
-	FOREIGN KEY("iddependente") REFERENCES "habilidade"("id"),
-	PRIMARY KEY("idhabilidade")
+
+CREATE TABLE IF NOT EXISTS depend (
+  skill_id INTEGER NOT NULL,
+  dependent_id INTEGER NOT NULL,
+  FOREIGN KEY (skill_id) REFERENCES skill (skill_id),
+  FOREIGN KEY (dependent_id) REFERENCES skill (skill_id),
+  PRIMARY KEY (skill_id)
 );
+
 COMMIT;
