@@ -72,7 +72,7 @@ router.put('/:class_id', (req, res) => {
     db.run(`UPDATE class SET class_name = coalesce(?, class_name), school_year = coalesce(?, school_year), school = coalesce(?, school), teacher_id = coalesce(?, teacher_id) WHERE class_id = ?`, [class_name, school_year, school, teacher_id, req.params.class_id], function (err) {
         if (err) {
             res.status(500).send('Erro ao atualizar turma');
-            console.log(err); 
+            console.log(err);
             return;
         }
 
@@ -82,6 +82,28 @@ router.put('/:class_id', (req, res) => {
         }
 
         res.status(200).send(`Turma ${req.params.class_id} atualizada com sucesso`);
+    });
+
+    db.close();
+});
+
+// remove uma turma
+router.delete('/:class_id', (req, res) => {
+    const db = new sqlite3.Database(DATABASE);
+
+    db.run(`DELETE FROM class WHERE class_id = ?`, [req.params.class_id], function (err) {
+        if (err) {
+            res.status(500).send('Erro ao remover turma');
+            console.log(err);
+            return;
+        }
+
+        if (this.changes == 0) {
+            res.status(404).send('Turma não encontrada');
+            return;
+        }
+
+        res.status(200).send(`Turma ${req.params.class_id} removida com sucesso`);
     });
 
     db.close();
