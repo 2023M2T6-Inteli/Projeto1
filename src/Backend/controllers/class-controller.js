@@ -1,4 +1,4 @@
-const Class = require('../models/classModel');
+const Class = require('../models/class-model');
 
 class classController {
 
@@ -22,9 +22,9 @@ class classController {
     }
 
     async addClass(req, res) {
-        const { class_name, school_year, school, teacher_id } = req.body;
+        const { class_name, school_year, school_id, teacher_id } = req.body;
 
-        const _class = new Class(class_name, school_year, school, teacher_id);
+        const _class = new Class(class_name, school_year, school_id, teacher_id);
 
         const result = await _class.addToDatabase();
 
@@ -37,9 +37,9 @@ class classController {
     }
 
     async updateClass(req, res) {
-        const { class_name, school_year, school, teacher_id } = req.body;
+        const { class_name, school_year, school_id, teacher_id } = req.body;
 
-        const _class = new Class(class_name, school_year, school, teacher_id);
+        const _class = new Class(class_name, school_year, school_id, teacher_id);
         _class.id = req.params.class_id;
 
         const result = await _class.updateInDatabase();

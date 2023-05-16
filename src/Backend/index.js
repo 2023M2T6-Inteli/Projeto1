@@ -2,14 +2,17 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
-const teachersController = require('./controllers/teacherController');
-const classesController = require('./controllers/classController');
+const databaseMiddleware = require('./middlewares/database-connection');
+
+const teachersController = require('./controllers/teacher-controller');
+const classesController = require('./controllers/class-controller');
 
 const HOST = '127.0.0.1';
 const PORT = 3000;
 
 app.use(express.json());
 app.use(cors());
+app.use(databaseMiddleware);
 
 app.get('/teachers', teachersController.getAllTeachers);
 app.get('/teachers/:teacher_id', teachersController.getTeacher);

@@ -1,4 +1,4 @@
-const Teacher = require('../models/teacherModel');
+const Teacher = require('../models/teacher-model');
 
 class teacherController {
 

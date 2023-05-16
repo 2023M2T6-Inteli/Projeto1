@@ -7,19 +7,28 @@ CREATE TABLE IF NOT EXISTS teacher (
   teacher_password TEXT
 );
 
+CREATE TABLE IF NOT EXISTS school (
+  school_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  school_name TEXT,
+  school_address TEXT,
+  school_phone TEXT
+);
+
 CREATE TABLE IF NOT EXISTS class (
   class_id INTEGER PRIMARY KEY AUTOINCREMENT,
   class_name TEXT,
   school_year INTEGER,
-  school TEXT,
+  school_id INTEGER,
   teacher_id INTEGER,
   FOREIGN KEY (teacher_id) REFERENCES teacher (teacher_id)
+  FOREIGN KEY (school_id) REFERENCES school (school_id)
 );
 
 CREATE TABLE IF NOT EXISTS student (
   student_id INTEGER PRIMARY KEY AUTOINCREMENT,
   student_name TEXT,
   class_id INTEGER,
+  note TEXT,
   FOREIGN KEY (class_id) REFERENCES class (class_id)
 );
 
