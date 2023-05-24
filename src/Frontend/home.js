@@ -54,3 +54,19 @@ new Chart(ctx3, {
   data: chartData3,
   options: chartOptions
 });
+
+window.addEventListener('scroll', function() {
+  var header = document.getElementsByClassName('header-container')[0];
+  var logoImage = document.querySelector('.logo-header');
+  var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+  if (scrollPosition > 0) {
+    header.classList.add('scrolled');
+    logoImage.src = './assets/logoPink.png'
+    console.log(header)
+  } else {
+    header.classList.remove('scrolled');
+    logoImage.src = './assets/logo.png'
+    console.log(header)
+  }
+});
