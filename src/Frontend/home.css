@@ -47,34 +47,56 @@ body {
 }
 
 .aside-container {
+  position: relative;
   margin-left: -300px;
-  padding: 4rem 0 0 0;
+  z-index: 999;
+  min-width: 15rem;
   transition: margin-left 0.3s ease-out;
-  overflow: hidden;
-  text-align: left;
-
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
-  width: auto;
   height: 100vh;
   background-color: #ffffff;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.aside-container h1, .aside-container h2, .aside-container p {
+.aside-container h1, .aside-container h2, .aside-container h3, .aside-container p {
   color: black;
 }
 
-.aside-turma {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
+.aside-container h1 {
+  padding: 2rem;
+  border-bottom: 1px solid #ccc;
+}
 
-  justify-content: start;
+.aside-container .aside-turma {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.aside-container .aside-turma h3 {
+  margin-bottom: 1rem;
+}
+
+.aside-container .aside-atividades {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.aside-container .aside-atividades h3 {
+  margin-bottom: 1rem;
+}
+
+.aside-container h2 {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  font-size: 2rem;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .main-container {
