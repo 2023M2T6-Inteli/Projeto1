@@ -19,8 +19,6 @@ body {
   z-index: 999;
   height: 80px;
   padding: 0.675rem 0.675rem;
-  border-bottom: 3px solid #1e1e1e;
-  background-color: #282828;
 
   display: flex;
   justify-content: space-between;
@@ -42,6 +40,41 @@ body {
 
 .icon-scrolled {
   color: black;
+}
+
+.icon-none {
+  opacity: 0;
+}
+
+.aside-container {
+  margin-left: -300px;
+  padding: 4rem 0 0 0;
+  transition: margin-left 0.3s ease-out;
+  overflow: hidden;
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.aside-container h1, .aside-container h2, .aside-container p {
+  color: black;
+}
+
+.aside-turma {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  justify-content: start;
 }
 
 .main-container {

@@ -73,3 +73,23 @@ window.addEventListener('scroll', function() {
     console.log(header)
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  var menuIcon = document.querySelector('.menu-icon');
+  const iconeHeader = document.querySelector('.menu-icon');
+  const aside = document.querySelector('.aside-container');
+
+  iconeHeader.addEventListener('mouseover', () => {
+    aside.style.marginLeft = '0';
+    menuIcon.classList.add("icon-none")
+  });
+
+  aside.addEventListener('mouseleave', () => {
+    aside.style.marginLeft = '-300px';
+    
+    setTimeout(() => {
+      menuIcon.classList.remove("icon-none");
+    }, 200);
+  });
+});
+
