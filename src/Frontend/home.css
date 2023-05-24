@@ -40,6 +40,10 @@ body {
   font-size: 2.5rem;
 }
 
+.icon-scrolled {
+  color: black;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;

@@ -58,15 +58,18 @@ new Chart(ctx3, {
 window.addEventListener('scroll', function() {
   var header = document.getElementsByClassName('header-container')[0];
   var logoImage = document.querySelector('.logo-header');
+  var menuIcon = document.querySelector('.menu-icon');
   var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
   if (scrollPosition > 0) {
     header.classList.add('scrolled');
-    logoImage.src = './assets/logoPink.png'
+    logoImage.src = './assets/logoPink.svg'
+    menuIcon.classList.add('icon-scrolled')
     console.log(header)
   } else {
     header.classList.remove('scrolled');
-    logoImage.src = './assets/logo.png'
+    logoImage.src = './assets/logo.svg'
+    menuIcon.classList.remove('icon-scrolled')
     console.log(header)
   }
 });
