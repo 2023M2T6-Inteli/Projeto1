@@ -157,14 +157,27 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+  }
+
   .cadastro-container {
+    position: relative;
     width: 60%;
-    top: 60%;
   }
 }
 
 @media (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+  }
+
   .cadastro-container {
+    position: relative;
     width: 30%;
   }
 }
