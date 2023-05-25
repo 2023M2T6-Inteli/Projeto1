@@ -11,27 +11,32 @@
 </head>
 
 <body>
-  <header class="header-container">
-    <img src="../../assets/logoNovaEscola.svg" alt="">
-    <img src="../../assets/logoPink.svg" alt="">
-    <img src="../../assets/logoInteli.png" alt="" class="logo-inteli">
-  </header>
-  <div class="main-login">
-    <div class="left-login">
-      <h1>Faça o seu Login E conheça a THAI</h1>
-    </div>
-    <div class="right-login">
-      <div class="card-login">
-        <h1>Login</h1>
-        <div class="textfield">
-          <label for="usuario">Usuário</label>
-          <input type="text" name="usuario" placeholder="Usuário">
-          <div class="textfield">
+  <div class="container">
+    <header class="header-container">
+      <img src="../../assets/logoNovaEscola.svg" alt="">
+      <img src="../../assets/logoPink.svg" alt="">
+      <img src="../../assets/logoInteli.png" alt="" class="logo-inteli">
+    </header>
+    <div class="main-container">
+      <div class="text-login-container">
+        <h1>Faça o seu Login <br> E conheça a THAI</h1>
+      </div>
+      <div class="form-login-container">
+        <h2>Login</h2>
+        <form class="form-login">
+          <div>
+            <label for="email">Usuário</label>
+            <input type="email" name="email" placeholder="name@example.com">
+          </div>
+          <div>
             <label for="senha">Senha</label>
             <input type="password" name="senha" placeholder="Senha">
+            <div class="other-links-container">
+              <span>Ainda não possui cadastro? <a href="../cadastro/index.html">Cadastre-se</a></span>
+            </div>
           </div>
           <button class="btn-login">Entrar</button>
-        </div>
+        </form>
       </div>
     </div>
   </div>
