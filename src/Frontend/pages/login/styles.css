@@ -1,0 +1,176 @@
+/* Tela de login */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 30%;
+
+  border-radius: 10px;
+  padding: 3rem;
+  background-color: #F5F5F5;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-container h2 {
+  color: #E32959;
+  font-size: 2rem;
+}
+
+.form-container a {
+  color: black;
+}
+
+.form-container a:visited {
+  color: black;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-container form input {
+  padding: 0.475rem;
+}
+
+.form-container .other-links {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.775rem;
+  justify-content: space-between;
+}
+
+.form-container button {
+  padding: 0.5rem 3rem;
+  background-color: #E32959;
+  border: none;
+  border-radius: 8px;
+  color: black;
+}
+
+.form-container .user-container, .form-container .password-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 414px) and (max-width: 767px) {
+  .form-container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-container {
+    width: 60%;
+    top: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-container {
+    width: 30%;
+  }
+}
+
+@media (min-width: 2055px) {
+  .form-container {
+    height: 30rem;
+  }
+}
+
+
+/* Tela de cadastro */
+
+.cadastro-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 30%;
+
+  border-radius: 10px;
+  padding: 3rem;
+  background-color: #F5F5F5;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cadastro-container h2 {
+  color: #E32959;
+  font-size: 2rem;
+}
+
+.cadastro-container a {
+  color: black;
+}
+
+.cadastro-container a:visited {
+  color: black;
+}
+
+.cadastro-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cadastro-container form input {
+  padding: 0.475rem;
+}
+
+.cadastro-container .other-links {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.775rem;
+  justify-content: space-between;
+}
+
+.cadastro-container button {
+  padding: 0.5rem 3rem;
+  background-color: #E32959;
+  border: none;
+  border-radius: 8px;
+  color: black;
+}
+
+.cadastro-container .user-cadastro, .cadastro-container .password-cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 414px) and (max-width: 767px) {
+  .cadastro-container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cadastro-container {
+    width: 60%;
+    top: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cadastro-container {
+    width: 30%;
+  }
+}
+
+@media (min-width: 2055px) {
+  .cadastro-container {
+    height: 30rem;
+  }
+}
