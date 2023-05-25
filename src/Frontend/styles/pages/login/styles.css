@@ -19,6 +19,7 @@
 .text-login-container h1 {
   font-size: 3rem;
   color: #E32959;
+  font-family: 'Lora';
 }
 
 .form-login-container {
@@ -87,6 +88,10 @@
 
 .btn-login:hover {
   background-color: #f0154c;
+}
+
+label, span, a, h2, button, input {
+  font-family: 'Work Sans', sans-serif;
 }
 
 @media (min-width: 414px) and (max-width: 1023px) {
