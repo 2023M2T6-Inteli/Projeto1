@@ -98,7 +98,7 @@ body * {
   border-radius: 8px;
   cursor: pointer;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .btn-login:hover {
