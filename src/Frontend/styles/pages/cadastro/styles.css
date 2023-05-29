@@ -1,118 +1,129 @@
-.form-cadastro-container {
+.container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  width: 30%;
-
-  border-radius: 10px;
-  padding: 1rem 3rem 3rem 3rem;
-  background-color: #F5F5F5;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  gap: 8rem;
 }
 
-.form-cadastro-container h2 {
+.main-login{
+    background: #F8F2F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.text-register-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.text-register-container h1 {
+  font-size: 3rem;
   color: #E32959;
-  font-size: 2rem;
   font-family: 'Work Sans', sans-serif;
 }
 
-.form-cadastro-container a {
-  color: black;
+.form-register-container {
+  background-color: #f9f9f9;
+  width: 30%;
+  height: 50%;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.form-cadastro-container a:visited {
-  color: black;
+.form-register-container h2 {
+  font-size: 1.5rem;
+  color: #E32959;
+  margin-bottom: 1.5rem;
 }
 
-.form-cadastro-container form {
+.form-register {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
-.form-cadastro-container form input {
-  padding: 0.475rem;
+.form-register div {
+  margin-bottom: 1.5rem;
+}
+
+.form-register label {
+  display: block;
+  font-size: 1rem;
+  color: #E32959;
+  margin-bottom: 0.5rem;
+}
+
+.form-register input {
   width: 100%;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 12pt;
-  outline: none;
-  box-sizing: border-box;
-  box-shadow: 0px 5px 20px #A6A9AD;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #E32959;
+  border-radius: 3px;
 }
 
-.form-cadastro-container .other-links-container {
+.password-container {
   display: flex;
-  flex-direction: row;
-  font-size: 0.775rem;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2;
 }
 
-.form-cadastro-container button {
+.other-links-container {
+  margin-top: 1.25rem;
+}
+
+.other-links-container a {
+  cursor: pointer;
+  color: black;
+}
+
+.other-links-container a:visited {
+  color: black;
+}
+
+.btn-login {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #E32959;
+  color: #fff;
+  font-size: 1rem;
   border: none;
   border-radius: 8px;
-  width: 100%;
-  padding: 16px 0px ;
-  outline: none;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 3px;
-  color: #E3E4E6;
-  background: #E32459;
   cursor: pointer;
-  box-shadow: 0px 10px 40px -12px #A6A9AD;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
-.form-cadastro-container .email-cadastro-container, .form-cadastro-container .password-cadastro-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.btn-login:hover {
+  background-color: #f0154c;
 }
 
 label, span, a, h2, button, input {
   font-family: 'Lora', serif;
 }
 
-@media (min-width: 414px) and (max-width: 767px) {
-  .form-cadastro-container {
+@media (min-width: 414px) and (max-width: 1023px) {
+  .container {
+    gap: 2rem;
+  }
+
+  .main-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .form-register-container {
     width: 80%;
   }
-}
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    gap: 20rem;
-  }
-
-  .form-cadastro-container {
-    position: relative;
-    width: 60%;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    gap: 20rem;
-  }
-
-  .form-cadastro-container {
-    position: relative;
-    width: 30%;
-  }
-}
-
-@media (min-width: 2055px) {
-  .form-cadastro-container {
-    height: 30rem;
+  .text-register-container h1 {
+    font-size: 2rem;
   }
 }
