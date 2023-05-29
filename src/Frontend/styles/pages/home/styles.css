@@ -1,0 +1,110 @@
+.card-welcome {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #4470C0;
+  background-image: url('../../../assets/welcomeImage.svg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card-welcome h2 {
+  color: #fff;
+  padding: 2rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.card-welcome p {
+  color: #fff;
+  padding: 0 0 0 2rem;
+  font-size: 1.115rem;
+  width: 65%;
+  margin-bottom: 3.5rem;
+}
+
+.card-welcome a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto 2rem auto;
+
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: #E32459;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-container .about-us-container {
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main-container .about-us-container h2 {
+  color: #E32459;
+  font-size: 2rem;
+}
+
+.main-container .about-us-container p {
+  text-align: center;
+}
+
+.main-container .about-us-container img {
+  width: 18.75rem;
+  height: 13.75rem;
+}
+
+.main-container .our-goals-container {
+  padding: 1rem;
+  background-color: #E32459;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main-container .our-goals-container h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.main-container .our-goals-container p {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.main-container .our-goals-container img {
+  width: 18.75rem;
+  height: 13.75rem;
+}
+
+.footer-container {
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8F959D;
+}
+
+.footer-container p {
+  color: #fff;
+}
+
+.footer-container img {
+  width: 5rem;
+  height: 5rem;
+}
