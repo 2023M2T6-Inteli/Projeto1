@@ -82,7 +82,6 @@
 .main-container .our-goals-container p {
   text-align: center;
   color: #fff;
-  text-transform: uppercase;
 }
 
 .main-container .our-goals-container img {
@@ -102,6 +101,7 @@
 
 .footer-container p {
   color: #fff;
+  text-transform: uppercase;
 }
 
 .footer-container img {
