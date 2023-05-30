@@ -7,11 +7,9 @@ button.addEventListener("click", function() {
     icon.classList.remove("fa-plus");
     icon.classList.add("fa-minus");
     section.classList.remove("hide");
-    section.style.display = "flex";
   } else {
     icon.classList.remove("fa-minus");
     icon.classList.add("fa-plus");
     section.classList.add("hide");
-    section.style.display = "none";
   }
 });

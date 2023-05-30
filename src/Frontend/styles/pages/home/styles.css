@@ -89,22 +89,27 @@
   height: 13.75rem;
 }
 
-.footer-container {
-  padding: 0.5rem;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #8F959D;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card-welcome a {
+    margin: 0 0 2rem 2rem;
+  }
 }
 
-.footer-container p {
-  color: #fff;
-  text-transform: uppercase;
-}
+@media (min-width: 1024px) {
+  .card-welcome h2 {
+    font-size: 4rem;
+  }
 
-.footer-container img {
-  width: 5rem;
-  height: 5rem;
+  .card-welcome p {
+    font-size: 2rem;
+  }
+
+  .card-welcome a {
+    margin: 0 0 2rem 2rem;
+    width: 60%;
+  }
+
+  .footer-container {
+    bottom: -10;
+  }
 }

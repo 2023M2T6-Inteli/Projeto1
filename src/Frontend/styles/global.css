@@ -8,6 +8,16 @@
 
 body {
   background-color: #f8f2f6;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .header-container-logged-out {
@@ -40,4 +50,25 @@ body {
 
 .header-container-logged-out .logo-inteli {
   height: 50px;
+}
+
+.footer-container {
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8F959D;
+  margin-top: auto;
+}
+
+.footer-container p {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-container img {
+  width: 5rem;
+  height: 5rem;
 }

@@ -96,3 +96,19 @@
   font-size: 1.25rem;
   color: #fff;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .class-skills-container {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-container .class-skills-container h2 {
+    font-size: 4rem;
+  }
+
+  .main-container .class-skills-container h3 {
+    font-size: 2rem;
+  }
+}

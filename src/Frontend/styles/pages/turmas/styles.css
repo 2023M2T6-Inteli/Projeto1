@@ -1,3 +1,7 @@
+.hide {
+  visibility: hidden;
+}
+
 .filter-section-container {
   background-color: #4470C0;
 
@@ -80,7 +84,7 @@
 }
 
 .add-class-container {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -114,4 +118,24 @@
   border: none;
   cursor: pointer;
   border: 5px solid #E32459;
+}
+
+@media (min-width: 1024px) {
+  .school-listing-container {
+    width: 70%;
+    margin: 3rem auto 0 auto;
+  }
+
+  .school-listing-container h2 {
+    color: #63666A;
+    font-size: 2.5rem;
+  }
+
+  .add-class-container input {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: 45%;
+    background-color: #E3E4E6;
+  }
 }
