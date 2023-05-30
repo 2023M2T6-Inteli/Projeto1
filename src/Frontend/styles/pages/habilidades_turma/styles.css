@@ -1,0 +1,98 @@
+.filter-section-container {
+  background-color: #4470C0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-section-container h2 {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.filter-section-container .filters-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.filter-section-container select {
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+}
+
+.main-container .class-skills-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.main-container .class-skills-container h2 {
+  color: #E32459;
+  font-size: 2rem;
+}
+
+.main-container .class-skills-container h3 {
+  color: #63666A;
+}
+
+.main-container .class-skills-container .list-class-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  list-style: none;
+  width: 80%;
+} 
+
+.main-container .class-skills-container .list-class-container li {
+  width: 100%;
+}
+
+.main-container .class-skills-container .list-class-container li .class-container {
+  padding: 2rem;
+  background-color: #4470C0;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container .class-skills-container .list-class-container .class-container p {
+  font-size: 0.785rem;
+}
+
+.main-container .class-skills-container .list-class-container .class-container .count-bar {
+  width: 75%;
+  height: 1.25rem;
+  background-color: #44BC50;
+  border-radius: 8px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.main-container .class-skills-container .list-class-container .class-container span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  color: #fff;
+}
