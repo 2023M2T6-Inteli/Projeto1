@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a31b7c0f52.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../styles/global.css">
+  <link rel="stylesheet" href="../../styles/pages/turmas/styles.css">
+  <title>Turmas | THAI</title>
+  <style>
+    .hide {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="header-container-logged-in">
+    <i class="fa-solid fa-bars" style="color: #e32459; font-size: 2rem;"></i>
+    <img class="logo" src="../../assets/deafaultLogoThai.svg"/>
+    <div class="image-container"><img src="../../assets/examplePhoto.svg"></div>
+  </header>
+  <section class="filter-section-container">
+    <h2>Filtrar</h2>
+    <div class="filters-container">
+      <select>
+        <option value="Escolas">Escolas</option>
+        <option value="EscolaA">Escola A</option>
+        <option value="EscolaB">Escola B</option>
+        <option value="EscolaC">Escola C</option>
+        <option value="EscolaD">Escola D</option>
+        <option value="EscolaE">Escola E</option>
+        <option value="EscolaF">Escola F</option>
+      </select>
+      <select>
+        <option value="Situação">Situação</option>
+        <option value="Boa">Boa</option>
+        <option value="Média">Média</option>
+        <option value="Ruim">Ruim</option>
+      </select>
+    </div>
+  </section>
+  <main class="main-container">
+    <section class="school-listing-container">
+      <div class="school-container">
+        <h2>Escola Estadual José de Barros</h2>
+        <ul class="class-list">
+          <li>Turma 1 | Situação: Boa</li>
+          <li>Turma 2 | Situação: Média</li>
+          <li>Turma 3 | Situação: Ruim</li>
+        </ul>
+      </div>
+    </section>
+    <button class="display-content-button"><i class="fa-solid fa-plus" style="color: #000000; font-size: 2rem;"></i></button>
+    <section class="add-class-container hide">
+      <h2>Nova turma</h2>
+      <input type="text" placeholder="Nome da turma">
+      <input type="text" placeholder="Escola">
+      <input type="text" placeholder="Série">
+
+      <button>Criar</button>
+    </section>
+  </main>
+  <script src="../../scripts/pages/turmas.js"></script>
+</body>
+</html>
