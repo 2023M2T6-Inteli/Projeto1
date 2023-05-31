@@ -31,6 +31,8 @@ app.post('/classes', classesController.addClass);
 app.put('/classes/:class_id', classesController.updateClass);
 app.delete('/classes/:class_id', classesController.removeClass);
 
+app.get('/classes/:class_id/activities', classesController.getActivities);
+
 app.listen(PORT, HOST, () => {
     console.log(`Server running on http://${HOST}:${PORT}`);
 });

@@ -65,6 +65,20 @@ class classController {
 
         res.status(200).send(`Turma ${_class.id} removido com sucesso`);
     }
+
+    async getActivities(req, res) {
+        const _class = new Class();
+        _class.id = req.params.class_id;
+        await _class.fetchFromDatabase();
+
+        if (!_class.name) {
+            res.status(404).send('Turma não encontrada');
+            return;
+        }
+
+        const activities = await _class.getActivities();
+        res.send(activities);
+    }
 }
 
 module.exports = new classController();
