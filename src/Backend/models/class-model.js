@@ -43,12 +43,6 @@ class Class {
         const result = await db.run(sql, [this.id]);
         return result;
     }
-
-    async getStudents() {
-        const sql = 'SELECT * FROM student WHERE class_id = ?';
-        const result = await db.fetch(sql, [this.id]);
-        return result;
-    }
 }
 
 module.exports = Class;

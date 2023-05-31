@@ -84,7 +84,7 @@ class teacherController {
         res.send(classes);
     }
 
-    async getStudents(req, res) {
+    async getActivities(req, res) {
         const teacher = new Teacher();
         teacher.id = req.params.teacher_id;
         await teacher.fetchFromDatabase();
@@ -94,8 +94,27 @@ class teacherController {
             return;
         }
 
-        const students = await teacher.getStudents();
-        res.send(students);
+        const activities = await teacher.getActivities();
+        res.send(activities);
+    }
+
+    async loginTeacher(req, res) {
+        const { email, password } = req.body;
+
+        const teacher = new Teacher();
+        teacher.email = email;
+        teacher.password = password;
+
+        const result = await teacher.canLogin();
+
+        if (!result) {
+            res.status(401).send('Credenciais inválidas');
+            return;
+        }
+
+        await teacher.fetchFromDatabaseByEmail();
+
+        res.status(200).send(`Professor ${teacher.id} logado com sucesso`);
     }
 }
 

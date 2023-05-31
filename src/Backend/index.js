@@ -21,8 +21,9 @@ app.put('/teachers/:teacher_id', teachersController.updateTeacher);
 app.delete('/teachers/:teacher_id', teachersController.removeTeacher);
 
 app.get('/teachers/:teacher_id/classes', teachersController.getClasses);
-app.get('/teachers/:teacher_id/students', teachersController.getStudents);
+app.get('/teachers/:teacher_id/activities', teachersController.getActivities);
 
+app.post('/login', teachersController.loginTeacher);
 
 app.get('/classes', classesController.getAllClasses);
 app.get('/classes/:class_id', classesController.getClass);
