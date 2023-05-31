@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #f8f2f6;
+  background-color: #e3dbe0;
   height: 100vh;
   position: relative;
   display: flex;
@@ -117,6 +117,14 @@ body {
   width: 5rem;
   height: 5rem;
 }
+
+h1, h2 ,h3, h4, h5, h6 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+p, span, label, input, textarea, strong {
+  font-family: 'Lora', serif;
+} 
 
 @media (min-width: 1024px) {
   .aside-container {
