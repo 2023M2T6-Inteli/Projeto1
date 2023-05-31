@@ -1,0 +1,189 @@
+.content-indication-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  background-color: #4470C0;
+  background-image: url('../../../assets/imageContentIndication.svg');
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.content-indication-container h2 {
+  padding: 2.5rem 0 0 1.25rem;
+  font-size: 1.875rem;
+  color: #FFF;
+}
+
+.content-indication-container h3 {
+  padding-left: 1.25rem;
+  font-size: 1.375rem;
+  color: #F8F2F6;
+  opacity: 0.7;
+}
+
+.content-indication-container .count-bar {
+  margin-top: 2.5rem;
+  background-color: #FF3A2F;
+  width: 75%;
+  padding: 1rem;
+  border-radius: 14px;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 1.5rem;
+
+  position: relative;
+}
+
+.content-indication-container .count-bar span {
+  padding: 0.425rem 1.25rem 0.425rem 1rem;
+  background-color: #E32459;
+  border-radius: 14px;
+  color: #FFF;
+  
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.recommended-materials-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommended-materials-container h2 {
+  color: #63666A;
+  padding: 1rem;
+  margin-left: 1rem;
+  align-self: self-start;
+  font-size: 1.75rem;
+}
+
+.recommended-materials-container .first-image-container {
+  width: 21.875rem;
+  height: 12.5rem;
+  border-radius: 14px;
+  border: 1px solid black;
+
+  background-image: url('../../../assets/firstImageRecommendedMaterials.svg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.recommended-materials-container .first-image-container div {
+  position: absolute;
+  bottom: 0;
+
+  background-color: #E3E4E6;
+  border-radius: 14px;
+  padding: 0.5rem;
+}
+
+.recommended-materials-container .second-images-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 21.875rem;
+  margin-top: 2rem;
+  border-radius: 14px;
+}
+
+.recommended-materials-container .second-images-container img {
+  width: 50%;
+  height: 100%;
+}
+
+.recommended-materials-container .second-images-container .first-card-container, .recommended-materials-container .second-images-container .second-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 14px;
+}
+
+.recommended-materials-container .second-images-container .first-card-container div, .recommended-materials-container .second-images-container .second-card-container div {
+  background-color: #E3E4E6;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  margin-left: -1rem;
+  padding: 0.5228125rem 1rem;
+  border-left: 1px solid black;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .responsive-recommended-materials-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .recommended-materials-container .second-images-container {
+    margin-top: 0;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-recommended-materials-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 5rem;
+  }
+
+  .content-indication-container h2 {
+    font-size: 3rem;
+  }
+
+  .content-indication-container h3 {
+    font-size: 2rem;
+  }
+
+  .recommended-materials-container h2 {
+    margin: 2rem auto;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .recommended-materials-container .second-images-container {
+    margin-top: 0;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  .recommended-materials-container .first-image-container {
+    height: 20rem;
+  }
+
+  .recommended-materials-container .second-images-container .first-card-container, .recommended-materials-container .second-images-container .second-card-container {
+    height: 9.5rem;
+  }
+
+  .recommended-materials-container .first-card-container div, .recommended-materials-container .second-card-container div {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap: 2rem;
+  }
+
+  .recommended-materials-container .first-card-container div p, .recommended-materials-container .second-card-container div p {
+    text-align: center;
+  }
+
+  .recommended-materials-container .first-card-container img, .recommended-materials-container .second-card-container img {
+    border-radius: 14px;
+    object-fit: cover;
+  }
+} 
