@@ -84,6 +84,12 @@
   color: #fff;
 }
 
+.main-container .our-goals-container ul{
+  color: #fff;
+  font-family: 'Lora', serif;
+  margin: 5%;
+}
+
 .main-container .our-goals-container img {
   width: 18.75rem;
   height: 13.75rem;
@@ -92,6 +98,9 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .card-welcome a {
     margin: 0 0 2rem 2rem;
+  }
+  .main-container .our-goals-container ul{
+    margin: 5%;
   }
 }
 
@@ -107,6 +116,10 @@
   .card-welcome a {
     margin: 0 0 2rem 2rem;
     width: 60%;
+  }
+
+  .main-container .our-goals-container ul{
+    margin: 0%;
   }
 
   .footer-container {
