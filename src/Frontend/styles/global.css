@@ -54,7 +54,7 @@ body {
 
 .aside-container {
   background-color: #E32459;
-  height: 100vh;
+  height: 100%;
   width: 85%;
   position: absolute;
   left: 0;
@@ -63,6 +63,8 @@ body {
   flex-direction: column;
   gap: 2rem;
   z-index: 999;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .aside-container .header-aside-container {
