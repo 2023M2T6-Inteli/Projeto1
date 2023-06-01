@@ -138,4 +138,8 @@
     width: 45%;
     background-color: #E3E4E6;
   }
+
+  .display-content-button {
+    width: 5%;
+  }
 }
