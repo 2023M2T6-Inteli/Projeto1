@@ -30,6 +30,17 @@ class Teacher {
         return result;
     }
 
+    async fetchFromDatabaseByEmail() {
+        const sql = 'SELECT * FROM teacher WHERE email = ?';
+        const result = await db.fetch(sql, [this.email]);
+        const teacher = result[0];
+        this.id = teacher?.teacher_id;
+        this.name = teacher?.teacher_name;
+        this.email = teacher?.email;
+        this.password = teacher?.teacher_password;
+        return result;
+    }
+
     async updateInDatabase() {
         const sql = 'UPDATE teacher SET teacher_name = coalesce(?, teacher_name), email = coalesce(?, email), teacher_password = coalesce(?, teacher_password) WHERE teacher_id = ?';
         const result = await db.run(sql, [this.name, this.email, this.password, this.id]);
@@ -54,16 +65,17 @@ class Teacher {
         return result;
     }
 
-    async getStudents() {
-        const sql =
-            `SELECT *
-            FROM student
-            JOIN class ON student.class_id = class.class_id
-            WHERE class.teacher_id = ?
-            `;
-
+    async getActivities() {
+        const sql = 'SELECT * FROM activity WHERE teacher_id = ?';
         const result = await db.fetch(sql, [this.id]);
         return result;
+    }
+
+    async canLogin() {
+        const sql = 'SELECT * FROM teacher WHERE email = ? AND teacher_password = ?';
+        const result = await db.fetch(sql, [this.email, this.password]);
+        console.log(result);
+        return result.length > 0;
     }
 }
 
