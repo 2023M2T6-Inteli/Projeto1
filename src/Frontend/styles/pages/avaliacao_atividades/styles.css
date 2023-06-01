@@ -1,0 +1,136 @@
+.title {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #E32459;
+  color: #ffffff;
+}
+
+.activity-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  background-color: rgba(68, 112, 192, 0.5);
+
+  padding-bottom: 1rem;
+}
+
+.activity-description-container .description-info-container {
+  font-size: 1.25rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.activity-description-container .description-info-container p {
+  color: #E32459;
+}
+
+.activity-description-container .description-info-container p span {
+  color: #fff;
+}
+
+.activity-description-container .set-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.activity-description-container .set-description-container label {
+  color: #E32459;
+  font-size: 1.5rem;
+}
+
+.activity-description-container .set-description-container textarea {
+  justify-self: center;
+  align-self: center;
+  border-radius: 20px;
+}
+
+.set-class-average {
+  margin: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.set-class-average label {
+  font-size: 1.75rem;
+  color: #E32459;
+}
+
+.set-class-average input {
+  padding: 2rem;
+  border: none;
+  border-radius: 20px;
+}
+
+.send-evaluation {
+  width: 70%;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  background-color: #4470C0;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.send-evaluation:hover {
+  background-color: #396cca;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    text-align: center;
+  }
+
+  .activity-description-container .set-description-container label {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .activity-description-container .set-description-container label {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .activity-description-container .description-info-container p {
+    font-size: 1.5rem;
+  }
+  
+  .activity-description-container .description-info-container p span {
+    font-size: 1.5rem;
+  }
+
+  .set-class-average {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .set-class-average input {
+    padding: 1rem 2rem;
+  }
+
+  .send-evaluation {
+    width: 20%;
+  }
+}
