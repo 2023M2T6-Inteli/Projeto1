@@ -105,6 +105,14 @@
   background-color: #f0154c;
 }
 
+.passwords-not-match {
+  display: none;
+  padding-top: 1rem;
+  color: red;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
 label, span, a, h2, button, input {
   font-family: 'Lora', serif;
 }

@@ -28,17 +28,18 @@
         <form class="form-register">
           <div>
             <label for="email">Digite seu nome e sobrenome</label>
-            <input type="text" name="email" required>
+            <input type="text" name="name" required>
           </div>
           <div>
             <label for="name">Digite seu melhor email</label>
-            <input type="text" name="name" placeholder="name@example.com" required>
+            <input type="text" name="email" placeholder="name@example.com" required>
           </div>
           <div>
             <label for="password">Crie uma senha</label>
             <input type="password" name="password" required>
             <label style="margin-top: 1rem;" for="confirm_password">Confirme sua senha</label>
             <input type="password" name="confirm_password" required>
+            <span class="passwords-not-match">As senhas não coincidem</span>
             <div class="other-links-container">
               <span>Já é professor? <a href="../login/index.html">Faça seu login</a></span>
             </div>

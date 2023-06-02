@@ -12,7 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var confirm_password = form.confirm_password.value;
 
     if (password !== confirm_password) {
-      alert("As senhas não conferem");
+      let paragraph = document.querySelector('.passwords-not-match')
+      paragraph.style.display = 'block'
+
+      setTimeout(() => {
+        paragraph.style.display = 'none'
+      }, 5000)
+      
       return;
     }
 
