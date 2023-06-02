@@ -98,8 +98,11 @@
   background-color: #f0154c;
 }
 
-label, span, a, h2, button, input {
-  font-family: 'Lora', serif;
+.password-error {
+  display: none;
+  color: red;
+  padding-top: 1rem;
+  text-decoration: underline;
 }
 
 @media (min-width: 375px) and (max-width: 1023px) {

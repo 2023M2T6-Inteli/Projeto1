@@ -20,10 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }).then(function (response) {
       if (response.status === 200) {
-        alert("Login realizado com sucesso!");
-        window.location.href = "../../../pages/home/index.html";
-      } else {
-        alert("Ocorreu um erro no login");
+        window.location.href = "../home/index.html";
+      } else if (response.status === 401) {
+        let paragraph = document.querySelector('.password-error')
+
+        paragraph.style.display = 'block'
+
+        setTimeout(() => {
+          paragraph.style.display = 'none'
+        }, 5000)
       }
     }).catch(function (error) {
       alert("Ocorreu um erro no login");

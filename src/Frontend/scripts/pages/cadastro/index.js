@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }).then(function (response) {
       if (response.status === 201) {
         alert("Cadastro realizado com sucesso!");
-        window.location.href = "../../../pages/home/index.html";
+        window.location.href = "../login/index.html";
       } else {
         alert("Ocorreu um erro no cadastro");
       }
