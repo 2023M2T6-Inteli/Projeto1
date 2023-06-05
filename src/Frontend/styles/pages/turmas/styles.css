@@ -120,6 +120,16 @@
   border: 5px solid #E32459;
 }
 
+.add-class-container .form-add-class-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  width: 75%;
+}
+
 @media (min-width: 1024px) {
   .school-listing-container {
     width: 70%;
