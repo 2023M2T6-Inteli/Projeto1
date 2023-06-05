@@ -4,11 +4,11 @@
   gap: 6rem;
 }
 
-.main-login{
-    background: #F8F2F6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main-login {
+  background: #F8F2F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-container {
@@ -105,7 +105,7 @@
   background-color: #f0154c;
 }
 
-.passwords-not-match {
+.register-error {
   display: none;
   padding-top: 1rem;
   color: red;
@@ -113,7 +113,12 @@
   text-decoration: underline;
 }
 
-label, span, a, h2, button, input {
+label,
+span,
+a,
+h2,
+button,
+input {
   font-family: 'Lora', serif;
 }
 

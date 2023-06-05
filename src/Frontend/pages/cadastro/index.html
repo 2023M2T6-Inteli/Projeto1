@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../styles/global.css">
   <link rel="stylesheet" href="../../styles/pages/cadastro/styles.css">
-  <script src="../../scripts/pages/cadastro/index.js"></script>
 
   <title>Cadastro | THAI</title>
 </head>
@@ -16,7 +15,7 @@
   <div class="container">
     <header class="header-container-logged-out">
       <img src="../../assets/logoNovaEscola.svg" alt="">
-      <img src="../../assets/logoPink.svg" alt="">
+      <img src="../../assets/deafaultLogoThai.svg" alt="">
       <img src="../../assets/logoInteli.png" alt="" class="logo-inteli">
     </header>
     <div class="main-container">
@@ -27,19 +26,19 @@
         <h2>Cadastro</h2>
         <form class="form-register">
           <div>
-            <label for="email">Digite seu nome e sobrenome</label>
+            <label for="name">Digite seu nome e sobrenome</label>
             <input type="text" name="name" required>
           </div>
           <div>
-            <label for="name">Digite seu melhor email</label>
-            <input type="text" name="email" placeholder="name@example.com" required>
+            <label for="email">Digite seu melhor email</label>
+            <input type="email" name="email" placeholder="name@example.com" required>
           </div>
           <div>
             <label for="password">Crie uma senha</label>
             <input type="password" name="password" required>
             <label style="margin-top: 1rem;" for="confirm_password">Confirme sua senha</label>
             <input type="password" name="confirm_password" required>
-            <span class="passwords-not-match">As senhas não coincidem</span>
+            <span class="register-error">As senhas não coincidem</span>
             <div class="other-links-container">
               <span>Já é professor? <a href="../login/index.html">Faça seu login</a></span>
             </div>
@@ -49,6 +48,7 @@
       </div>
     </div>
   </div>
+  <script src="../../scripts/pages/cadastro/index.js"></script>
 </body>
 
 </html>

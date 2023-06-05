@@ -30,6 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
           paragraph.style.display = 'none'
         }, 5000)
       }
+
+      alert("Login realizado com sucesso!");
+
+      response.json().then((body) => {
+        let teacherID = body.teacherID;
+        localStorage.setItem("teacherID", teacherID);
+      });
+      window.location.href = "../home/index.html";
+
     }).catch(function (error) {
       alert("Ocorreu um erro no login");
     });

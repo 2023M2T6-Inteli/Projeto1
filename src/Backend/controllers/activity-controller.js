@@ -4,7 +4,7 @@ class ActivityController {
 
     async getAllActivities(req, res) {
         const activities = await Activity.getAllActivities();
-        res.send(activities);
+        res.json(activities);
     }
 
     async getActivity(req, res) {
@@ -13,11 +13,11 @@ class ActivityController {
         await activity.fetchFromDatabase();
 
         if (!activity.name) {
-            res.status(404).send('Atividade não encontrada');
+            res.status(404).json({ error: 'Atividade não encontrada' });
             return;
         }
 
-        res.send(activity);
+        res.json(activity);
     }
 
     async addActivity(req, res) {
@@ -28,11 +28,11 @@ class ActivityController {
         const result = await activity.addToDatabase();
 
         if (!result) {
-            res.status(500).send('Erro ao adicionar atividade');
+            res.status(500).json({ error: 'Erro ao adicionar atividade' });
             return;
         }
 
-        res.status(201).send(`Atividade ${activity.id} adicionada com sucesso`);
+        res.status(201).json({ message: `Atividade ${activity.id} adicionada com sucesso` });
     }
 
     async updateActivity(req, res) {
@@ -44,11 +44,11 @@ class ActivityController {
         const result = await activity.updateInDatabase();
 
         if (!result.changes) {
-            res.status(404).send('Atividade não encontrada');
+            res.status(404).json({ error: 'Atividade não encontrada' });
             return;
         }
 
-        res.status(200).send(`Atividade ${activity.id} atualizada com sucesso`);
+        res.status(200).json({ message: `Atividade ${activity.id} atualizada com sucesso` });
     }
 
     async removeActivity(req, res) {
@@ -58,11 +58,11 @@ class ActivityController {
         const result = await activity.removeFromDatabase();
 
         if (!result.changes) {
-            res.status(404).send('Atividade não encontrada');
+            res.status(404).json({ error: 'Atividade não encontrada' });
             return;
         }
 
-        res.status(200).send(`Atividade ${activity.id} removida com sucesso`);
+        res.status(200).json({ message: `Atividade ${activity.id} removida com sucesso` });
     }
 }
 
