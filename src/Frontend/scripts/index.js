@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* Verificar teacherID no localStorage */
 document.addEventListener("DOMContentLoaded", function () {
   var teacherID = localStorage.getItem('teacherID');
+  console.log('teacherID:', teacherID);
 
   // Verifica se o teacherID existe
   if (teacherID === null) {

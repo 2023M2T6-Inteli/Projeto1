@@ -65,11 +65,12 @@
           style="color: #000000; font-size: 2rem;"></i></button>
       <section class="add-class-container hide">
         <h2>Nova turma</h2>
-        <input type="text" placeholder="Nome da turma">
-        <input type="text" placeholder="Escola">
-        <input type="text" placeholder="Série">
-
-        <button>Criar</button>
+        <form class="form-add-class">
+          <input name="name" type="text" placeholder="Nome da turma" required>
+          <input name="school" type="text" placeholder="Escola" required>
+          <input name="school_year" type="text" placeholder="Série" required>
+          <button type="submit">Criar</button>
+        </form>
       </section>
     </main>
   </div>
