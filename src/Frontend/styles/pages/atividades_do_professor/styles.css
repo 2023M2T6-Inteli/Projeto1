@@ -1,0 +1,143 @@
+.title {
+  width: 100%;
+  padding: 2rem;
+  background-color: #3661b0;
+  color: #ffffff; 
+}
+
+.filter-section-container {
+  background-color: #4470C0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-section-container h2 {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+
+.filter-section-container .filters-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+  .filter-section-container select {
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.school-listing-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 3rem;
+}
+
+.school-listing-container h2 {
+  color: #63666A;
+  font-size: 1.5rem;
+}
+
+.school-listing-container h3 {
+  color: #63666A;
+  font-size: 1rem;
+}
+
+
+.school-listing-container .class-list {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1rem;
+  list-style: none;
+  width: 100%;
+}
+
+.school-listing-container .class-list li {
+  background-color: #E32459;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.display-content-button {
+  border: 2px solid black;
+  border-radius: 999px;
+  background-color: transparent;
+  padding: 1rem;
+  width: 15%;
+  align-self: flex-end;
+  margin: 1rem 1.5rem 0 0;
+  cursor: pointer;
+}
+
+.horizontal-line{
+      border: none;
+      border-top: 1px solid #E32459;
+      margin: 20px 0;
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .title {
+      text-align: center;
+    }
+  
+    .activity-description-container .set-description-container label {
+      text-align: center;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .title {
+      text-align: center;
+      font-size: 3rem;
+    }
+  
+    .activity-description-container .set-description-container label {
+      text-align: center;
+      font-size: 2rem;
+    }
+  
+    .activity-description-container .description-info-container p {
+      font-size: 1.5rem;
+    }
+    
+    .activity-description-container .description-info-container p span {
+      font-size: 1.5rem;
+    }
+  
+    .set-class-average {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  
+    .set-class-average input {
+      padding: 1rem 2rem;
+    }
+  
+    .send-evaluation {
+      width: 20%;
+    }
+  }
