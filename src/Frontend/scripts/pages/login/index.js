@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(() => {
           paragraph.style.display = 'none'
-        }, 5000)
+        }, 5000);
+        return;
       }
 
       alert("Login realizado com sucesso!");
