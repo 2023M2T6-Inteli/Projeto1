@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="../../styles/pages/turmas/styles.css">
   <title>Turmas | THAI</title>
 </head>
+
 <body>
   <div class="container">
     <aside class="aside-container">
@@ -25,7 +27,7 @@
     </aside>
     <header class="header-container-logged-in">
       <i class="fa-solid fa-bars" style="color: #e32459; font-size: 2rem;"></i>
-      <img class="logo" src="../../assets/deafaultLogoThai.svg"/>
+      <img class="logo" src="../../assets/deafaultLogoThai.svg" />
       <div class="image-container"><img src="../../assets/examplePhoto.svg"></div>
     </header>
     <section class="filter-section-container">
@@ -51,7 +53,7 @@
     <main class="main-container">
       <section class="school-listing-container">
         <div class="school-container">
-          <h2>Escola Estadual José de Barros</h2>
+          <h2>Escola Estadual Teste da Silva</h2>
           <ul class="class-list">
             <li>Turma 1 | Situação: Boa</li>
             <li>Turma 2 | Situação: Média</li>
@@ -59,14 +61,16 @@
           </ul>
         </div>
       </section>
-      <button class="display-content-button"><i class="fa-solid fa-plus" style="color: #000000; font-size: 2rem;"></i></button>
+      <button class="display-content-button"><i class="fa-solid fa-plus"
+          style="color: #000000; font-size: 2rem;"></i></button>
       <section class="add-class-container hide">
         <h2>Nova turma</h2>
-        <input type="text" placeholder="Nome da turma">
-        <input type="text" placeholder="Escola">
-        <input type="text" placeholder="Série">
-
-        <button>Criar</button>
+        <form class="form-add-class-container">
+          <input name="name" type="text" placeholder="Nome da turma" required>
+          <input name="school" type="text" placeholder="Escola" required>
+          <input name="school_year" type="text" placeholder="Série" required>
+          <button type="submit">Criar</button>
+        </form>
       </section>
     </main>
   </div>
@@ -75,7 +79,8 @@
     <img src="../../assets/logoInteliFooter.svg">
   </footer>
 
-  <script src="../../scripts/pages/turmas/index.js"></script>
   <script src="../../scripts/index.js"></script>
+  <script src="../../scripts/pages/turmas/index.js"></script>
 </body>
+
 </html>

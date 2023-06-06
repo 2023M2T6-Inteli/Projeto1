@@ -1,14 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 6rem;
 }
 
-.main-login{
-    background: #F8F2F6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main-login {
+  background: #F8F2F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-container {
@@ -32,10 +32,10 @@
 .form-register-container {
   background-color: #f9f9f9;
   width: 30%;
-  height: 50%;
   padding: 3rem;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
 }
 
 .form-register-container h2 {
@@ -105,11 +105,24 @@
   background-color: #f0154c;
 }
 
-label, span, a, h2, button, input {
+.register-error {
+  display: none;
+  padding-top: 1rem;
+  color: red;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
+label,
+span,
+a,
+h2,
+button,
+input {
   font-family: 'Lora', serif;
 }
 
-@media (min-width: 414px) and (max-width: 1023px) {
+@media (min-width: 375px) and (max-width: 1023px) {
   .container {
     gap: 2rem;
   }

@@ -4,21 +4,20 @@ class classController {
 
     async getAllClasses(req, res) {
         const classes = await Class.getAllClasses();
-        res.send(classes);
+        res.json(classes);
     }
 
     async getClass(req, res) {
         const _class = new Class();
         _class.id = req.params.class_id;
-        console.log(_class.id);
         await _class.fetchFromDatabase();
 
         if (!_class.name) {
-            res.status(404).send('Turma não encontrada');
+            res.status(404).json({ error: 'Turma não encontrada' });
             return;
         }
 
-        res.send(_class);
+        res.json(_class);
     }
 
     async addClass(req, res) {
@@ -29,11 +28,11 @@ class classController {
         const result = await _class.addToDatabase();
 
         if (!result) {
-            res.status(500).send('Erro ao adicionar professor');
+            res.status(500).json({ error: 'Erro ao adicionar turma' });
             return;
         }
 
-        res.status(201).send(`Turma ${_class.id} adicionado com sucesso`);
+        res.status(201).json({ message: `Turma ${_class.id} adicionada com sucesso` });
     }
 
     async updateClass(req, res) {
@@ -45,11 +44,11 @@ class classController {
         const result = await _class.updateInDatabase();
 
         if (!result.changes) {
-            res.status(404).send('Turma não encontrada');
+            res.status(404).json({ error: 'Turma não encontrada' });
             return;
         }
 
-        res.status(200).send(`Turma ${_class.id} atualizado com sucesso`);
+        res.status(200).json({ message: `Turma ${_class.id} atualizada com sucesso` });
     }
 
     async removeClass(req, res) {
@@ -59,11 +58,11 @@ class classController {
         const result = await _class.removeFromDatabase();
 
         if (!result.changes) {
-            res.status(404).send('Turma não encontrada');
+            res.status(404).json({ error: 'Turma não encontrada' });
             return;
         }
 
-        res.status(200).send(`Turma ${_class.id} removido com sucesso`);
+        res.status(200).json({ message: `Turma ${_class.id} removida com sucesso` });
     }
 
     async getActivities(req, res) {
@@ -72,12 +71,12 @@ class classController {
         await _class.fetchFromDatabase();
 
         if (!_class.name) {
-            res.status(404).send('Turma não encontrada');
+            res.status(404).json({ error: 'Turma não encontrada' });
             return;
         }
 
         const activities = await _class.getActivities();
-        res.send(activities);
+        res.json(activities);
     }
 }
 
