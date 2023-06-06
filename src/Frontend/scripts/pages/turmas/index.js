@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    var form = document.querySelector(".form-add-class");
+    var form = document.querySelector(".form-add-class-container");
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 class_name: form.name.value,
                 school_year: form.school_year.value,
                 school_id: 1,
-                teacherID: localStorage.getItem("teacherID")
+                teacher_id: parseInt(localStorage.getItem("teacherID"))
             }),
             headers: {
                 "Content-Type": "application/json",
