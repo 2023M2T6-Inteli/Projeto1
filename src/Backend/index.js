@@ -6,6 +6,8 @@ const databaseMiddleware = require('./middlewares/database-connection');
 
 const teachersController = require('./controllers/teacher-controller');
 const classesController = require('./controllers/class-controller');
+const activitiesController = require('./controllers/activity-controller');
+const gradesController = require('./controllers/grade-controller');
 
 const HOST = '127.0.0.1';
 const PORT = 3000;
@@ -31,7 +33,21 @@ app.post('/classes', classesController.addClass);
 app.put('/classes/:class_id', classesController.updateClass);
 app.delete('/classes/:class_id', classesController.removeClass);
 
-app.get('/classes/:class_id/activities', classesController.getActivities);
+// activities
+app.get('/activities', activitiesController.getAllActivities);
+app.get('/activities/:activity_id', activitiesController.getActivity);
+app.post('/activities', activitiesController.addActivity);
+app.put('/activities/:activity_id', activitiesController.updateActivity);
+app.delete('/activities/:activity_id', activitiesController.removeActivity);
+
+// grades
+app.get('/grades', gradesController.getAllGrades);
+app.get('/grades/:grade_id', gradesController.getGrade);
+app.post('/grades', gradesController.addGrade);
+app.put('/grades/:grade_id', gradesController.updateGrade);
+app.delete('/grades/:grade_id', gradesController.removeGrade);
+
+app.get('/grades/skill/:skill_id', gradesController.getLevelBySkill);
 
 app.listen(PORT, HOST, () => {
     console.log(`Server running on http://${HOST}:${PORT}`);
