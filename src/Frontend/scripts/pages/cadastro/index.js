@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let teacherID = body.teacherID;
                 localStorage.setItem("teacherID", teacherID);
             });
-            window.location.href = "../home/index.html";
+            window.location.href = "../home";
 
         }).catch(function (error) {
             alert("Ocorreu um erro no cadastro");

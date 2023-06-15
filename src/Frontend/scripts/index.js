@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Verifica se o teacherID existe
   if (teacherID === null) {
     // Redireciona o usuário para a página de login
-    window.location.href = '../login/index.html';
+    window.location.href = '../login';
   } else {
     // O teacherID existe, faça algo aqui se necessário
     console.log('teacherID:', teacherID);

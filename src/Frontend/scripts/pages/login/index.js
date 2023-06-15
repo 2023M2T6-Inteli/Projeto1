@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }).then(function (response) {
       if (response.status === 200) {
-        window.location.href = "../home/index.html";
+        window.location.href = "../home";
       } else if (response.status === 401) {
         let paragraph = document.querySelector('.password-error')
 
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let teacherID = body.teacherID;
         localStorage.setItem("teacherID", teacherID);
       });
-      window.location.href = "../home/index.html";
+      window.location.href = "../home";
 
     }).catch(function (error) {
       alert("Ocorreu um erro no login");
