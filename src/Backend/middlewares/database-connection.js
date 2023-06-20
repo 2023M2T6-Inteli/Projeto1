@@ -1,6 +1,10 @@
 const db = require('../utils/database');
 
 function databaseConnection(req, res, next) {
+    if (!req.url.includes('/api/')) {
+        return next();
+    }
+
     if (db.connected) {
         return next();
     }

@@ -20,17 +20,17 @@ app.use(express.json());
 app.use(cors());
 app.use(databaseMiddleware);
 
-app.post('/login', teachersController.loginTeacher);
+app.post('/api/login', teachersController.loginTeacher);
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../Frontend/pages/home/index.html'));
 });
 
-app.use('/', pagesRouter);
-app.use('/grades', gradesRouter);
-app.use('/activities', activitiesRouter);
-app.use('/classes', classesRouter);
-app.use('/teachers', teachersRouter);
+app.use('/api/', pagesRouter);
+app.use('/api/grades', gradesRouter);
+app.use('/api/activities', activitiesRouter);
+app.use('/api/classes', classesRouter);
+app.use('/api/teachers', teachersRouter);
 
 
 app.use(express.static("../Frontend/"));
