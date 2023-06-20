@@ -1,7 +1,7 @@
 const db = require('../utils/database');
 
 function databaseConnection(req, res, next) {
-    if (req.headers['content-type'] !== 'application/json') {
+    if (!req.url.includes('/api/')) {
         return next();
     }
 
