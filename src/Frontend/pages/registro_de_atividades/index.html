@@ -32,43 +32,22 @@
 
     <h1 class="title">Registro de atividade</h1>
 
-    <main class="content-container">
-
-      <label>Ano Referente:</label>
-      <select>
-        <option value="9">9 ano</option>
-        <option value="8">8 ano</option>
-        <option value="7">7 ano</option>
-        <option value="6">6 ano</option>
-        <option value="5">5 ano</option>
-        <option value="4">4 ano</option>
-      </select>
+    <form class="content-container">
+      <label>Nome da atividade:</label>
+      <input type="text" required/>
 
       <label>Disciplina:</label>
-      <select>
-        <option value="matematica">Matemática</option>
-        <option value="portugues">Português</option>
-        <option value="ciencias">Ciências</option>
-      </select>
-
-      <label>Escola:</label>
-      <select id="schools">
-        <option value="escola_professor_xavier">Escola Professor Xavier</option>
-        <option value="escola_professor_girafales">Escola Professor Girafales</option>
-        <option value="escola_professor_cumbuca">escola Professor Cumbuca</option>
-      </select>
-
-      <label>Turma:</label>
-      <select>
-        <option value="1">Turma 1</option>
-        <option value="2">Turma 2</option>
-        <option value="3">Turma 3</option>
+      <select required>
+        <option value="EF01MA08">Matemática</option>
+        <option value="EF09HI10">História</option>
+        <option value="EF07CI07">Ciências</option>
       </select>
 
       <label>Descição de atividade:</label>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <button>Criar</button>
-    </main>
+      <textarea name="" id="" cols="10" rows="5" required></textarea>
+
+      <button type="submit">Criar</button>
+    </form>
   </div>
 
   <footer class="footer-container">
@@ -77,7 +56,7 @@
   </footer>
 
   <script src="../../scripts/index.js"></script>
-  <script src="../../scripts/pages/registro_de_atividades/index.js"></script>
+  <script src="../../scripts/pages/registro_de_atividade/index.js"></script>
 </body>
 
 </html>
