@@ -1,7 +1,7 @@
 const button = document.querySelector(".display-content-button");
 const icon = button.querySelector("i");
 const section = document.querySelector(".add-class-container");
-const defaultUrl = "http://127.0.0.1:1234/api";
+const defaultUrl = "/api";
 
 var capitalizeFirstLetter = (str) => {
   if (str.length === 0) {
@@ -70,9 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         selectElement.addEventListener('change', function () {
           const selectedOption = selectElement.value.toLowerCase();
-        
+
           const divElements = document.querySelectorAll('.school-container');
-        
+
           divElements.forEach(divElement => {
             const schoolId = divElement.getAttribute('data-school-id');
             if (schoolId == selectedOption) {
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           });
         });
-        
+
       });
     })
     .catch(function (error) {
