@@ -90,6 +90,16 @@
 
 .send-evaluation:hover {
   background-color: #396cca;
+  margin: 0 auto;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

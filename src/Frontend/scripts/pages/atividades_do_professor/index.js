@@ -4,7 +4,7 @@ var capitalizeFirstLetter = (str) => {
   }
 
   return str.charAt(0).toUpperCase() + str.slice(1);
-}
+};
 
 async function getContents(subject, hits) {
   try {
@@ -29,12 +29,12 @@ async function getContents(subject, hits) {
 
 document.addEventListener('DOMContentLoaded', async () => {
   const teacherId = localStorage.getItem('teacherID');
-  
+
   if (!teacherId) {
     console.error('ID do professor não encontrado no localStorage.');
     return;
   }
-  
+
   const defaultUrl = `http://127.0.0.1:3000/api/teachers/${teacherId}/activities`;
 
   try {
@@ -75,8 +75,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
           const ulElement = document.createElement('ul');
           const liElement = document.createElement('li');
-          const paragraphElement = document.createElement('p');
+          const paragraphElement = document.createElement('a');
           paragraphElement.textContent = activity.activity_name;
+
+          const baseUrl = '../../../Frontend/pages/avaliacao_atividade/index.html';
+          const activity_id = activity.activity_id;
+          paragraphElement.href = `${baseUrl}?activity_id=${encodeURIComponent(activity_id)}`;
 
           liElement.appendChild(paragraphElement);
           ulElement.appendChild(liElement);
@@ -91,8 +95,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else {
           const ulElement = divElement.querySelector('ul');
           const liElement = document.createElement('li');
-          const paragraphElement = document.createElement('p');
+          const paragraphElement = document.createElement('a');
           paragraphElement.textContent = activity.activity_name;
+
+          const baseUrl = '../../../Frontend/pages/avaliacao_atividade/index.html'; 
+          const activity_id = activity.activity_id;
+          paragraphElement.href = `${baseUrl}?activity_id=${encodeURIComponent(activity_id)}`;
 
           liElement.appendChild(paragraphElement);
           ulElement.appendChild(liElement);
@@ -107,7 +115,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       const divElements = document.querySelectorAll('.discipline-container');
 
-      divElements.forEach(divElement => {
+      divElements.forEach((divElement) => {
         if (divElement.classList.contains(selectedOption)) {
           divElement.style.display = 'block';
         } else {
