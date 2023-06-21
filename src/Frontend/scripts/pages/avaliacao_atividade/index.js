@@ -26,8 +26,8 @@ const getContents = async (subject, hits) => {
   }
 };
 
-const fetchClasses = async (teacherId) => {
-  const url = `http://127.0.0.1:1234/api/teachers/${teacherId}/classes`;
+const fetchClasses = async (teacherID) => {
+  const url = `/api/teachers/${teacherID}/classes`;
 
   try {
     const response = await fetch(url);
@@ -60,7 +60,7 @@ const fetchActivity = async () => {
   const params = new URLSearchParams(window.location.search);
   const id = params.get('activity_id');
 
-  const url = `http://127.0.0.1:1234/api/activities/${id}`;
+  const url = `/api/activities/${id}`;
 
   const nameSpan = document.querySelector('.name-span');
   const descriptionSpan = document.querySelector('.description-span');
@@ -74,6 +74,9 @@ const fetchActivity = async () => {
     }
 
     const data = await response.json();
+
+    nameSpan.textContent = data.name
+    descriptionSpan.textContent = data.description
 
     nameSpan.textContent = data.name;
     descriptionSpan.textContent = data.description;
