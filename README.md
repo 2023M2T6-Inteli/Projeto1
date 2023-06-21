@@ -4,36 +4,27 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do projeto
+# THAI - Trilha de Habilidades Inteligentes
 
-## Nome do grupo
+## Hefestus
 
 ## Integrantes: 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
+- <a href="https://www.linkedin.com/in/bianca-borges-969586206/">Bianca Borges Lins</a>
+- <a href="https://www.linkedin.com/in/breno-santos-0843131b8/">Breno Arthur Guimarães Santos</a>
+- <a href="https://www.linkedin.com/in/eduardosbarreto/">Eduardo Barreto</a> 
+- <a href="https://www.linkedin.com/in/gabrielle-mitoso-6253a219b/">Gabrielle Mitoso</a> 
+- <a href="https://www.linkedin.com/in/guilherme-pardi-87b815264/">Guilherme Pardi Borges</a>
+- <a href="https://www.linkedin.com/in/henrique-ottoboni-magalh%C3%A3es-77b950264">Henrique Ottoboni</a> 
+- <a href="https://www.linkedin.com/in/kaylanevasconcelos/">Kaylane Vasconcelos</a>
 
 ## 📝 Descrição
 
-Curta descrição sobre o que o seu projeto faz (problema a ser resolvido e solução proposta).
+A THAI trata-se de um site que tem como objetivo auxiliar professores que desejam ter um maior controle e consciência do nível de aprendizagem e defasagem de suas turmas. Isto é feito a partir de uma análise das principais dificuldades que as turmas possuem, a partir disso, é recomendado ao professor da turma um plano de ação a partir da criticidade e grau de defasagem dos alunos.
+
+Portanto a THAI, com sua metodologia para professores, busca ter contribuição ativa na missão de mitigar a problemática de defasagem pós-pandemia do ensino fundamental público, contribuindo para o projeto de Recomposição de Aprendizagens da Nova Escola.
+
 
 ## 📁 Estrutura de pastas
-
-```
-Alunos inteli (remover essa observação do readme.md após leitura e execução):
-
-Supondo que você é da Turma 4 e Projeto 5, substitua:
-
-T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.pdf
-por
-T4_G5_V01_Web_application_document.pdf
-
-Faça o mesmo para a documentação em formato DOCX.
-```
 
 |--> documentos<br>
   &emsp;| --> outros <br>
@@ -77,20 +68,6 @@ npm start
 6. O servidor está online.
 
 
-```
-Alunos inteli (remover essa observação do readme.md após leitura e execução):
-
-1. Certifique-se que há um arquivo "package.json" na pasta backend do projeto.
-
-2. Dentro deste arquivo, encontre a propriedade "scripts", e adicione um atributo de nome "start"
-com o valor "node <CAMINHO_DO_ARQUIVO_DO_SERVIDOR>." Atenção: "<CAMINHO_DO_ARQUIVO_DO_SERVIDOR>" 
-deve ser substituído pelo caminho para o arquivo principal da aplicação, utilizado para subir o
-servidor. Por exemplo, se o arquivo utilizado para subir o servidor é "app.js", o atributo start
-deve possuir o valor "node app.js".
-
-3. No arquivo utilizado para subir a aplicação, defina a porta padrão de execução para "1234".
-````
-
 ## 🗃 Histórico de lançamentos
 
 * 0.2.1 - 25/01/2022
@@ -114,4 +91,10 @@ deve possuir o valor "node app.js".
 
 Aqui estão as referências usadas no projeto:
 
-1. <https://creativecommons.org/share-your-work/>
+1. <https://novaescola.org.br/quem-somos>
+2. <https://novaescola.org.br/seja-parceiro>
+3. <https://novaescola.org.br/conteudo/446/termos-de-uso>
+4. <https://www.gov.br/inep/pt-br/assuntos/noticias/censo-da-educacao-superior/ensino-a-distancia-cresce-474-em-uma-decada>
+5. <https://g1.globo.com/educacao/noticia/2020/05/26/66percent-dos-brasileiros-de-9-a-17-anos-nao-acessam-a-internet-em-casa-veja-numeros-que-mostram-dificuldades-no-ensino-a-distancia.ghtml>
+6. <https://www.educamaisbrasil.com.br/educacao/noticias/6-plataformas-de-cursos-online-gratuitos-para-professores>
+7. <https://tecnoblog.net/responde/o-que-e-um-endpoint-em-ti/#:~:text=Imagine%20uma%20rede%20de%20internet,ou%20n%C3%A3o%2C%20s%C3%A3o%20considerados%20endpoints.>
