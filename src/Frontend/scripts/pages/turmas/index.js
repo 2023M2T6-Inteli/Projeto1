@@ -1,7 +1,7 @@
 const button = document.querySelector(".display-content-button");
 const icon = button.querySelector("i");
 const section = document.querySelector(".add-class-container");
-const defaultUrl = "http://127.0.0.1:3000/api";
+const defaultUrl = "http://127.0.0.1:1234/api";
 
 var capitalizeFirstLetter = (str) => {
   if (str.length === 0) {

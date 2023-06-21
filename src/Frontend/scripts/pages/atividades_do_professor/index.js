@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
-  const defaultUrl = `http://127.0.0.1:3000/api/teachers/${teacherId}/activities`;
+  const defaultUrl = `http://127.0.0.1:1234/api/teachers/${teacherId}/activities`;
 
   try {
     const response = await fetch(defaultUrl, {

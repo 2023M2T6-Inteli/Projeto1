@@ -1,4 +1,4 @@
-const LOGIN_URL = "http://localhost:3000/login";
+const LOGIN_URL = "http://localhost:1234/login";
 
 document.addEventListener("DOMContentLoaded", function () {
   var form = document.querySelector(".form-login");
