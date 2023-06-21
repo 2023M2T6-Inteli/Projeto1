@@ -65,7 +65,7 @@ class classController {
         res.status(200).json({ message: `Turma ${_class.id} removida com sucesso` });
     }
 
-    async getActivities(req, res) {
+    async getGrades(req, res) {
         const _class = new Class();
         _class.id = req.params.class_id;
         await _class.fetchFromDatabase();
@@ -75,8 +75,8 @@ class classController {
             return;
         }
 
-        const activities = await _class.getActivities();
-        res.json(activities);
+        const grades = await _class.getGrades();
+        res.json(grades);
     }
 }
 
