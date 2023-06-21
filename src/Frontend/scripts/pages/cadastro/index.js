@@ -1,4 +1,4 @@
-const REGISTER_URL = "http://localhost:1234/teachers";
+const REGISTER_URL = "http://localhost:1234/api/teachers";
 
 function set_register_error(message) {
     let paragraph = document.querySelector('.register-error');

@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           const paragraphElement = document.createElement('a');
           paragraphElement.textContent = activity.activity_name;
 
-          const baseUrl = '../../../Frontend/pages/avaliacao_atividade/index.html'; 
+          const baseUrl = '../../../Frontend/pages/avaliacao_atividade/index.html';
           const activity_id = activity.activity_id;
           paragraphElement.href = `${baseUrl}?activity_id=${encodeURIComponent(activity_id)}`;
 
