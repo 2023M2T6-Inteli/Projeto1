@@ -9,4 +9,6 @@ router.post('/', classesController.addClass);
 router.put('/:class_id', classesController.updateClass);
 router.delete('/:class_id', classesController.removeClass);
 
+router.get('/:class_id/grades', classesController.getGrades);
+
 module.exports = router;
