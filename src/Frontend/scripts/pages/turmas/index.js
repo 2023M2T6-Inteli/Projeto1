@@ -159,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var form = document.querySelector(".form-add-class-container");
 
   form.addEventListener("submit", function (event) {
+    event.preventDefault();
     fetch(`${defaultUrl}/classes`, {
       method: "POST",
       body: JSON.stringify({
@@ -179,16 +180,13 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then(function (body) {
-        let a = document.createElement("a")
-        a.innerHTML = form.name.value;
-        a.href = '#'
-        let li = document.createElement("li");
-        li.classList.add("class-list-li")
-        document.querySelector(".class-list-li").appendChild(a)
-        document.querySelector(".class-list").appendChild(li);
+        // reload
+        window.location.reload();
       })
       .catch(function (error) {
         console.error(`Ocorreu um erro ao criar a turma: ${error.message}`);
+        console.log(error);
+        console.dir(error);
         alert("Ocorreu um erro ao criar a turma");
       });
   });
