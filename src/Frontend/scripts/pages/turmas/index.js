@@ -65,7 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         let li = document.createElement("li");
-        li.innerHTML = classe.class_name;
+        let a = document.createElement("a")
+        a.href = `/habilidades_turma?class_id=${classe.class_id}`;
+        a.innerHTML = classe.class_name;
+        li.appendChild(a)
         schoolDiv.appendChild(li);
 
         selectElement.addEventListener('change', function () {
@@ -93,8 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var form = document.querySelector(".form-add-class-container");
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
     fetch(`${defaultUrl}/classes`, {
       method: "POST",
       body: JSON.stringify({
@@ -115,8 +116,12 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then(function (body) {
+        let a = document.createElement("a")
+        a.innerHTML = form.name.value;
+        a.href = '#'
         let li = document.createElement("li");
-        li.innerHTML = form.name.value;
+        li.classList.add("class-list-li")
+        document.querySelector(".class-list-li").appendChild(a)
         document.querySelector(".class-list").appendChild(li);
       })
       .catch(function (error) {

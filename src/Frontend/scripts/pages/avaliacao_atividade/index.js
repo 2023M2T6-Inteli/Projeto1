@@ -105,6 +105,7 @@ form.addEventListener('submit', async (event) => {
 
   const gradeValue = averageInput.value;
   const classId = classSelect.value;
+  console.log(classId)
 
   const params = new URLSearchParams(window.location.search);
   const id = params.get('activity_id');
@@ -130,6 +131,7 @@ form.addEventListener('submit', async (event) => {
     }
 
     console.log('Avaliação enviada com sucesso!');
+    location.reload()
   } catch (error) {
     console.error(error);
   }
