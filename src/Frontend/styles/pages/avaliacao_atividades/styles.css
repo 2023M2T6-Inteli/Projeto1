@@ -102,6 +102,26 @@
   justify-content: center;
 }
 
+.set-class-school {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 20%;
+}
+
+.set-school-select {
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.set-class-select {
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .title {
     text-align: center;

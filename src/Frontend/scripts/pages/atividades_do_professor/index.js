@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
-  const defaultUrl = `http://127.0.0.1:3000/api/teachers/${teacherId}/activities`;
+  const defaultUrl = `/api/teachers/${teacherId}/activities`;
 
   try {
     const response = await fetch(defaultUrl, {
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           const paragraphElement = document.createElement('a');
           paragraphElement.textContent = activity.activity_name;
 
-          const baseUrl = '../../../Frontend/pages/avaliacao_atividade/index.html';
+          const baseUrl = '/avaliacao_atividade';
           const activity_id = activity.activity_id;
           paragraphElement.href = `${baseUrl}?activity_id=${encodeURIComponent(activity_id)}`;
 
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           const paragraphElement = document.createElement('a');
           paragraphElement.textContent = activity.activity_name;
 
-          const baseUrl = '../../../Frontend/pages/avaliacao_atividade/index.html'; 
+          const baseUrl = '/avaliacao_atividade';
           const activity_id = activity.activity_id;
           paragraphElement.href = `${baseUrl}?activity_id=${encodeURIComponent(activity_id)}`;
 
