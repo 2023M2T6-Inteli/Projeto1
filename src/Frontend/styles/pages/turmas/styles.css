@@ -96,7 +96,7 @@
 
 .add-class-container h2 {
   background-color: #E3E4E6;
-  padding: 0.5rem 1.5rem; 
+  padding: 0.5rem 1.5rem;
   border-radius: 10px;
   margin-top: -3rem;
   border: 5px solid #E32459;
@@ -144,10 +144,11 @@
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+  color: #fff;
 }
 
 .school-container li a {
-  color: #000;
+  color: #fff;
 }
 
 @media (min-width: 1024px) {

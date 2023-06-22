@@ -55,7 +55,7 @@
 
   list-style: none;
   width: 80%;
-} 
+}
 
 .main-container .class-skills-container .list-class-container li {
   width: 100%;
@@ -71,12 +71,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #fff;
+}
+
+.main-container .class-skills-container .list-class-container a {
+  color: #fff;
 }
 
 .main-container .class-skills-container .list-class-container .class-container span {
   margin-right: 1rem;
   font-size: 1.25rem;
-  color: #E32459;
 }
 
 .class-container a {

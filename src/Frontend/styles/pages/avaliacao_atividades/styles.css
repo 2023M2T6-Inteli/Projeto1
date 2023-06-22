@@ -24,10 +24,12 @@
 
 .activity-description-container .description-info-container p {
   color: #E32459;
+  font-weight: bold;
 }
 
 .activity-description-container .description-info-container p span {
-  color: #fff;
+  color: #333;
+  font-weight: normal;
 }
 
 .activity-description-container .set-description-container {
@@ -136,7 +138,7 @@
   .activity-description-container .description-info-container p {
     font-size: 1.5rem;
   }
-  
+
   .activity-description-container .description-info-container p span {
     font-size: 1.5rem;
   }
