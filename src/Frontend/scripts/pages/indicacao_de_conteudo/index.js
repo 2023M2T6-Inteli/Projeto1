@@ -15,16 +15,6 @@ async function getContents(subject, hits) {
 }
 
 function createCard(title, description, url, image_url) {
-  /*
-  <div class="second-card-container">
-    <img src="../../assets/secondImageRecommendedMaterials.svg">
-    <div>
-      <h4>Matemática básica</h4>
-      <p>Aprenda a lecionar aulas de matemática</p>
-    </div>
-  </div>
-  */
-
   const card_container = document.createElement("div");
   card_container.classList.add("second-card-container");
 
@@ -61,11 +51,8 @@ window.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(queryString);
   const skill = urlParams.get('habilidade');
 
-  const skill_element = document.getElementById("skill");
-  skill_element.innerHTML = `#${skill}`;
-
   getContents(skill, 3).then((contents) => {
-    document.getElementById("skill_description").innerHTML = contents[0].habilidades[0];
+    document.getElementById("skill_description").textContent = contents[0].habilidades[0];
     contents.forEach(element => {
       element.resumoCard = element.resumoCard.split(':')[1].substring(0, 75) + "...";
       createCard(element.titulo, element.resumoCard, element.url, element.thumbnail);

@@ -43,7 +43,7 @@
 .disciplines-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
 
@@ -74,6 +74,18 @@
   text-align: center;
   padding: 1rem 2rem;
   border-radius: 10px;
+}
+
+.disciplines-container ul li a {
+  color: #fff;
+}
+
+.disciplines-container ul li a:visited {
+  color: #fff;
+}
+
+.discipline-container {
+  width: 50%;
 }
 
 .display-content-button {

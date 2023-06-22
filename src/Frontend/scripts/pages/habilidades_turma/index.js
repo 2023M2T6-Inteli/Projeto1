@@ -50,7 +50,7 @@ fetch(classInfoUrl)
       fetch(activityUrl)
         .then(response => response.json())
         .then(data => {
-          span.textContent = data.grade_value;
+          span.textContent = `Média da turma: ${data.grade_value}`;
         })
         .catch(error => {
           console.log('Ocorreu um erro na requisição:', error);

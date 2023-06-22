@@ -10,6 +10,10 @@
   background-repeat: no-repeat;
 }
 
+#skill_description {
+  width: 70%;
+}
+
 .content-indication-container h2 {
   padding: 2.5rem 0 0 1.25rem;
   font-size: 1.875rem;
@@ -55,7 +59,7 @@
 }
 
 .recommended-materials-container h2 {
-  color: #63666A;
+  color: #E32459;
   padding: 1rem;
   margin-left: 1rem;
   align-self: self-start;
@@ -117,6 +121,14 @@
   margin-left: -1rem;
   padding: 0.5228125rem 1rem;
   border-left: 1px solid black;
+}
+
+.second-card-container div h4 {
+  color: #000;
+}
+
+.second-card-container div p {
+  color: #000;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

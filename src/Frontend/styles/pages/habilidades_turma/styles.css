@@ -70,31 +70,27 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.main-container .class-skills-container .list-class-container .class-container p {
-  font-size: 0.785rem;
-}
-
-.main-container .class-skills-container .list-class-container .class-container .count-bar {
-  width: 75%;
-  height: 1.25rem;
-  background-color: #44BC50;
-  border-radius: 8px;
-
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  justify-content: space-between;
 }
 
 .main-container .class-skills-container .list-class-container .class-container span {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   margin-right: 1rem;
   font-size: 1.25rem;
-  color: #fff;
+  color: #E32459;
+}
+
+.class-container a {
+  color: #E32459;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.class-container a:visited {
+  color: #E32459;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
