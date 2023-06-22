@@ -31,6 +31,45 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
+  function fetchGrades(classId) {
+    return fetch(`${defaultUrl}/classes/${classId}/grades`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error(`Erro ao obter as notas: ${response.status} - ${response.statusText}`);
+        }
+        return response.json();
+      });
+  }
+
+  function calculateAverage(gradeValues) {
+    if (gradeValues.length === 0) {
+      return 0;
+    }
+
+    var total = gradeValues.reduce(function (sum, value) {
+      return sum + value;
+    }, 0);
+
+    return total / gradeValues.length;
+  }
+
+  function getAverageClassification(average) {
+    if (average >= 7 && average <= 10) {
+      return "Bom";
+    } else if (average >= 5 && average < 7) {
+      return "Médio";
+    } else if (average >= 1 && average < 5) {
+      return "Ruim";
+    } else {
+      return "Indefinido";
+    }
+  }
+
   fetch(`${defaultUrl}/teachers/${teacherID}/classes`, {
     method: "GET",
     headers: {
@@ -68,7 +107,32 @@ document.addEventListener("DOMContentLoaded", function () {
         let a = document.createElement("a")
         a.href = `/habilidades_turma?class_id=${classe.class_id}`;
         a.innerHTML = classe.class_name;
-        li.appendChild(a)
+        li.appendChild(a);
+
+        // Obter as notas e calcular a média
+        fetchGrades(classe.class_id)
+          .then(function (grades) {
+            var gradeValues = grades.map(function (item) {
+              return item.grade_value;
+            });
+
+            var average = calculateAverage(gradeValues);
+
+            // Adicionar a tag <span> com o valor da média e classificação
+            let span = document.createElement("span");
+
+            let classification = getAverageClassification(average);
+            let classificationSpan = document.createElement("span");
+            classificationSpan.textContent = `${classification}`;
+
+            li.appendChild(span);
+            li.appendChild(classificationSpan);
+          })
+          .catch(function (error) {
+            console.error(`Ocorreu um erro ao obter as notas: ${error.message}`);
+            alert("Ocorreu um erro ao obter as notas");
+          });
+
         schoolDiv.appendChild(li);
 
         selectElement.addEventListener('change', function () {
@@ -85,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           });
         });
-
       });
     })
     .catch(function (error) {
