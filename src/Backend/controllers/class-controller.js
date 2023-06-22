@@ -100,6 +100,24 @@ class classController {
         // Retorna as notas da turma
         res.json(grades);
     }
+
+    // Método assíncrono para obter as atividades de uma turma
+    async getActivities(req, res) {
+        const _class = new Class();
+        _class.id = req.params.class_id;
+        await _class.fetchFromDatabase();
+
+        // Verifica se a turma foi encontrada no banco de dados
+        if (!_class.name) {
+            res.status(404).json({ error: 'Turma não encontrada' });
+            return;
+        }
+
+        // Obtém as atividades da turma
+        const activities = await _class.getActivities();
+        // Retorna as atividades da turma
+        res.json(activities);
+    }
 }
 
 module.exports = new classController();

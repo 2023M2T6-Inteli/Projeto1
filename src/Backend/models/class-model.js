@@ -55,6 +55,16 @@ class Class {
         const result = await db.fetch(sql, [this.id]);
         return result;
     }
+
+    // Método para obter todas as atividades associadas à classe
+    async getActivities() {
+        // grade tem class id skill id e activity id
+        // activity id tem skill id
+
+        const sql = 'SELECT * FROM activity WHERE activity_id IN (SELECT activity_id FROM grade WHERE class_id = ?)';
+        const result = await db.fetch(sql, [this.id]);
+        return result;
+    }
 }
 
 module.exports = Class;

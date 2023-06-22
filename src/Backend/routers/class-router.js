@@ -15,5 +15,7 @@ router.put('/:class_id', classesController.updateClass);
 router.delete('/:class_id', classesController.removeClass);
 // Rota para buscar as notas de uma classe específica com base no ID da classe
 router.get('/:class_id/grades', classesController.getGrades);
+// Rota para buscar as atividades de uma classe específica com base no ID da classe
+router.get('/:class_id/activities', classesController.getActivities);
 
 module.exports = router;
