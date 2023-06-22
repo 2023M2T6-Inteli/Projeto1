@@ -12,7 +12,6 @@
   gap: 1rem;
 
   width: 50%;
-  margin: 0 auto;
   margin-top: 2rem;
 }
 
@@ -28,8 +27,16 @@
   width: 50%;
   margin: 0 auto;
   border: none;
-  border-radius: 8px;
   padding: 1rem 0;
+  justify-self: center;
+  align-self: center;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px;
+  font-size: 14px;
+  cursor: text;
+  outline: none;
 }
 
 .content-container select {
@@ -39,6 +46,15 @@
   border: none;
   border-radius: 8px;
   padding: 1rem 0;
+  justify-self: center;
+  align-self: center;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px;
+  font-size: 14px;
+  cursor: text;
+  outline: none;
 }
 
 .content-container textarea {
@@ -47,6 +63,15 @@
   margin: 0 auto;
   border: none;
   border-radius: 8px;
+  justify-self: center;
+  align-self: center;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px;
+  font-size: 14px;
+  cursor: text;
+  outline: none;
 }
 
 .content-container button {
@@ -59,4 +84,9 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
+  color: #E32459;
+}
+
+.content-container label {
+  color: #E32459;
 }
