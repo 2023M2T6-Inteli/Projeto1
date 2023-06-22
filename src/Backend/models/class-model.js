@@ -30,7 +30,7 @@ class Class {
         const _class = result[0];
         this.name = _class?.class_name; // Atualiza as propriedades da instância com os valores retornados do banco de dados
         this.schoolYear = _class?.school_year;
-        this.school_id = _class?.school;
+        this.school_id = _class?.school_id;
         this.teacherId = _class?.teacher_id;
         return result;
     }
