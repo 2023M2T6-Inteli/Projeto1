@@ -17,7 +17,7 @@ function databaseConnection(req, res, next) {
     db.connect();
 
     // Ao finalizar a resposta, fecha a conexão com o banco de dados
-    res.on('finish', () => db.close());
+    // res.on('finish', () => db.close());
 
     // Chama o próximo middleware
     next();
