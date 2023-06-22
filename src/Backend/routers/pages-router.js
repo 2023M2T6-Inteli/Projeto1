@@ -3,6 +3,7 @@ const path = require('path');
 
 const router = express.Router();
 
+// Lista de páginas
 const pages = [
     'home',
     'atividades_do_professor',
@@ -15,8 +16,10 @@ const pages = [
     'turmas'
 ];
 
+// Para cada página, define uma rota correspondente
 pages.forEach(page => {
     router.get(`/${page}`, (req, res) => {
+        // Envia o arquivo HTML correspondente da página
         res.sendFile(path.join(__dirname, `../../Frontend/pages/${page}/index.html`));
     });
 });
