@@ -13,5 +13,6 @@ router.post('/', activitiesController.addActivity);
 router.put('/:activity_id', activitiesController.updateActivity);
 // Rota para remover uma atividade com base no ID
 router.delete('/:activity_id', activitiesController.removeActivity);
-
+// Rota para buscar a nota de uma atividade específica de uma turma específica com base no ID da atividade e no ID da turma
+router.get('/:activity_id/class/:class_id', activitiesController.getGradeByActivityAndClass);
 module.exports = router;

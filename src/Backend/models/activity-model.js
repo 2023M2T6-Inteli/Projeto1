@@ -48,6 +48,13 @@ class Activity {
         const result = await db.run(sql, [this.id]);
         return result;
     }
+
+    // Função assíncrona para buscar a nota de uma atividade específica
+    async getGradeByClassID(classId) {
+        const sql = 'SELECT * FROM grade WHERE activity_id = ? AND class_id = ?';
+        const result = await db.fetch(sql, [this.id, classId]);
+        return result;
+    }
 }
 
 // Exporta a classe Activity para uso em outros arquivos

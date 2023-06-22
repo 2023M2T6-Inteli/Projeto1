@@ -78,6 +78,29 @@ class ActivityController {
 
         res.status(200).json({ message: `Atividade ${activity.id} removida com sucesso` });
     }
+
+    // Obtém a nota de uma atividade específica de uma turma específica
+    async getGradeByActivityAndClass(req, res) {
+        const activity = new Activity();
+        activity.id = req.params.activity_id;
+        await activity.fetchFromDatabase();
+
+        // Verifica se a atividade foi encontrada
+        if (!activity.name) {
+            res.status(404).json({ error: 'Atividade não encontrada' });
+            return;
+        }
+
+        const grade = await activity.getGradeByClassID(req.params.class_id);
+
+        // Verifica se a nota foi encontrada
+        if (!grade[0]) {
+            res.status(404).json({ error: 'Nota não encontrada' });
+            return;
+        }
+
+        res.json(grade[0]);
+    }
 }
 
 module.exports = new ActivityController();
