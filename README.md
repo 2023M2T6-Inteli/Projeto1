@@ -33,7 +33,20 @@ Portanto a THAI, com sua metodologia para professores, busca ter contribuição 
 |--> imagens<br>
 |--> src<br>
   &emsp;|--> Backend<br>
+    &emsp; &emsp;|--> controllers<br>
+    &emsp; &emsp;|--> data<br>
+    &emsp; &emsp;|--> middlewares<br>
+    &emsp; &emsp;|--> models<br>
+    &emsp; &emsp;|--> node_modules<br>
+    &emsp; &emsp;|--> utils<br>
+    &emsp; &emsp;| index.js<br>
+    &emsp; &emsp;| package-lock.json<br>
+    &emsp; &emsp;| package.json<br>
   &emsp;|--> Frontend<br>
+    &emsp; &emsp;|--> assets<br>
+    &emsp; &emsp;|--> pages<br>
+    &emsp; &emsp;|--> scripts<br>
+    &emsp; &emsp;|--> styles<br>
 | readme.md<br>
 | license.txt
 
@@ -70,22 +83,30 @@ npm start
 
 ## 🗃 Histórico de lançamentos
 
-* 0.2.1 - 25/01/2022
-    * Atualização de documentos (código do módulo permanece inalterado).
-* 0.2.0 - 15/01/2022
-    * Remove `setDefaultXYZ()`
-    * Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * Crash quando chama `baz()`
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.6.0 - 22/06/2023
+    * Integração de todas as páginas
+    * Finalização do projeto
+* 0.6.0 - 01/06/2023
+    * Criação da página 'registro de atividade'
+    * Inicio da integração
+* 0.5.0 - 30/05/2023
+    * Aplicação da responsividade nas telas: home, turmas e habilidade por turmas
+* 0.4.0 - 24/05/2023
+    * Página de home finalizada
+    * Página de cadastro finalizada
+* 0.3.0 - 12/05/2023
+    * Modelagem do banco de dados
+    * 1° versão do Mockup THAI
+* 0.2.0 - 11/05/2023
+    * Criação do Crud
+    * Inserção das API's
+* 0.1.0 - 18/04/2023
+    * Inserindo WAD
+    * Inserindo WAD
 
 ## 📋 Licença/License
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, Nome do integrante 1, Nome do integrante 2, Nome do integrante 3, Nome do integrante 4, Nome do integrante 5, Nome do integrante 6, Nome do integrante 7</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, Bianca Borges Lins, Breno Arthur Guimarães Santos, Eduardo Barreto, Gabrielle Mitoso, Guilherme Pardi Borges, Henrique Ottoboni, Kaylane Vasconcelos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
 
 ## 🎓 Referências
 
