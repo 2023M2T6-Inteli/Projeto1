@@ -28,8 +28,8 @@ Portanto a THAI, com sua metodologia para professores, busca ter contribuição 
 
 |--> documentos<br>
   &emsp;| --> outros <br>
-  &emsp;| T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.pdf<br>
-  &emsp;| T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.docx<br>
+  &emsp;| T6_G1_V0.5_Web_application_document.pdf<br>
+  &emsp;| T6_G1_V0.5_Web_application_document.docx<br>
 |--> imagens<br>
 |--> src<br>
   &emsp;|--> Backend<br>
