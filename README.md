@@ -17,6 +17,9 @@
 - <a href="https://www.linkedin.com/in/henrique-ottoboni-magalh%C3%A3es-77b950264">Henrique Ottoboni</a> 
 - <a href="https://www.linkedin.com/in/kaylanevasconcelos/">Kaylane Vasconcelos</a>
 
+## Orientador:
+- <a href="https://www.linkedin.com/in/fabiana-martins-de-oliveira-8993b0b2/">Fabiana Martins de Oliveira</a>
+
 ## 📝 Descrição
 
 A THAI trata-se de um site que tem como objetivo auxiliar professores que desejam ter um maior controle e consciência do nível de aprendizagem e defasagem de suas turmas. Isto é feito a partir de uma análise das principais dificuldades que as turmas possuem, a partir disso, é recomendado ao professor da turma um plano de ação a partir da criticidade e grau de defasagem dos alunos.
